@@ -1,0 +1,86 @@
+body{
+	height:1200px;
+	width: 1500px;
+	font-family: arial;
+	font-size:12pt;
+	background-color:0;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+section{
+	width: 1300px;
+	text-align:center;
+	text-align:center;
+	border: 5px dotted #ccc;
+	margin-top:20px;
+	height:500px;
+
+}
+section.foodNdrink {
+	height:500px;
+}
+.cells{
+	padding-left:100px;
+}
+
+#burg_div{
+	/* display: flex; */
+}
+#dryck_div{
+
+	 /* display: flex;	 */
+}
+
+#footer{
+	text-align:right;
+}
+#extrainfo_box{
+	flex:1;
+	order:1;
+	height: 130px;
+
+}
+#tableNO_div{
+	flex:1;
+	order:2;
+	height: 125px;
+}
+#tableNO{
+	margin-top: 80px;
+}
+#send_button{
+	margin-top: 80px;
+}
+#sendB_div{
+flex:1;
+order:3;
+height: 125px;
+}
+#testB{
+	display: flex;
+	height: 250px;
+}
+
+button:hover{
+    background-color:white;
+	text-align:center;
+}
+textarea{
+	border:Ridge;
+	border-color:#232b2b;
+}
+button{
+	 /*border-radius:10px; 	*/
+}
+
+div.scrollmenu {
+  overflow: auto;
+	height: 430px;
+}
+
+
+#addable_stuff{
+	height: 250px;
+	border: 1px dotted #ccc;
+}
