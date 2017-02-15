@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="data/menu.js"></script>.
+		<script src="js\script.js"></script>
+		<meta charset="utf-8"/>
+		<title>Nation Bar</title>
+	</head>
+	<body id="body">
+		<div id="container">
+			<main id="head_div">
+			<h1>Välkommen till Nation Puben</h1>
+			</main>
+
+			<!--Burger section-->
+			<section class="foodNdrink">
+
+				<h2>Välj burgare</h2>
+				<div class="scrollmenu">
+					<div ID="Burg_div">
+					</div>
+				</div>
+			</section>
+
+			<!--Beverage section-->
+			<section class="foodNdrink">
+				<h2>Välj läsk/dryck</h2>
+				<div class="scrollmenu">
+					<div ID="dryck_div">
+					</div>
+				</div>
+			</section>
+
+			<section ID="extrainfo">
+				<h2>Tillbehör</h2>
+
+
+
+                <div id="addable_stuff" class="scrollmenu">
+                </div>
+
+
+							<div id="testB">
+								<!--Text box reserved for extra info-->
+								<div ID="extrainfo_box" >
+									<h4>Extra information(allergier, egna önskemål mm).</h4>
+									<textarea id="txtBox" rows="4" cols="50" maxlength="100"></textarea>
+								</div>
+
+
+								<!--Table number selection box-->
+								<div id="tableNO_div" class="extraD">
+									Bordsnummer: <input type="number" id="tableNO" name="tableNumber" size="1000" min="1" max="15">
+
+								</div>
+
+
+								<!--Send info button-->
+								<div id="sendB_div" class="extraD">
+									<button type="submit" id="send_button" onclick="sendinfo_press()">
+										<img src="http://images.clipartbro.com/4/green-tick-4984.png" width="20" height="20">
+										Send Info
+									</button>
+									<div id="warningsign" style="visibility: hidden" ><h5 style="color:red">Obs! Fyll i bordsnummer</h5>
+									</div>
+								</div>
+							</div>
+
+			</section>
+			<div ID="footer">
+				<hr>
+				Copyright &copy; 2017 Team Drake
+			</div>
+		</div>
+		 <script>disp_food("Burg_div")</script>
+		 <script>displayExtra_Alternative("addable_stuff")</script>
+	</body>
+</html>
