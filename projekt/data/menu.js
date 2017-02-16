@@ -74,4 +74,25 @@ var sauce = [
 		"sauce_name": "Mild sås",
 		"img_link": "http://www.matskafferiet.se/wp-content/uploads/2011/11/kebabs%C3%A5s.jpg"
 	},
-]
+	{
+		"sauce_name": "BBQ sås",
+		"img_link": "https://www.zeta.nu/wp-content/uploads/2017/01/bbqsas_li-1024x767.jpg"
+	},
+	{
+		"sauce_name": "Bönbearnaise",
+		"img_link": "https://www.zeta.nu/wp-content/uploads/2016/05/Bonbearnaise-1024x683.jpg"
+	},
+	{
+		"sauce_name": "Test sås A",
+		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
+	{
+		"sauce_name": "Test sås B",
+		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
+	{
+		"sauce_name": "Test sås C",
+		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
+];
+
