@@ -1,12 +1,39 @@
 body{
-	height:1200px;
-	width: 1500px;
+	margin: 0;
 	font-family: arial;
 	font-size:12pt;
-	background-color:0;
-	margin-left:auto;
-	margin-right:auto;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
 
+li a.active {
+    background-color: black;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+#container{
+	margin-left: 15%;
+	padding:1px 16px;
+	height:auto;
 }
 section{
 	width: 1300px;
@@ -23,20 +50,12 @@ section.foodNdrink {
 .cells{
 	padding-left:100px;
 }
-
-#burg_div{
-	/* display: flex; */
-}
-#dryck_div{
-
-	 /* display: flex;	 */
-}
-
 #footer{
 	text-align:right;
+	width: 1310px;
 }
 #extrainfo_box{
-	flex:1;
+	flex:3;
 	order:1;
 	height: 130px;
 
@@ -64,23 +83,17 @@ height: 125px;
 
 button:hover{
     background-color:white;
-	text-align:center;
+		text-align:center;
 }
 textarea{
 	border:Ridge;
 	border-color:#232b2b;
 }
-button{
-	 /*border-radius:10px; 	*/
-}
-
 div.scrollmenu {
   overflow: auto;
 	height: 430px;
 }
-
-
 #addable_stuff{
-	height: 250px;
-	border: 1px dotted #ccc;
+height: 250px;
+border: 1px dotted #ccc;
 }
