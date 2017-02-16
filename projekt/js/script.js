@@ -87,7 +87,6 @@
 		/*Area of intrest*/
 		var Button_area = document.createElement("DIV");
 		Button_area.setAttribute("id","B_area");
-
 		/*minus button*/
 		var minus_button = document.createElement("BUTTON");
 		minus_button.setAttribute("id","M_button");
@@ -100,7 +99,6 @@
 		minus_sign.setAttribute("width", "20");
 		minus_button.appendChild(minus_sign);
 		Button_area.appendChild(minus_button);
-
 		/*txt field*/
 		var txt_field = document.createElement("INPUT");
 		txt_field.setAttribute("type","number");
@@ -111,7 +109,6 @@
 		txt_field.size = "10";
 		Button_area.appendChild(txt_field);
 		txt_field.style.textAlign="center";
-
 		/*plus button*/
 		var plus_button = document.createElement("BUTTON");
 		plus_button.setAttribute("id","P_button");
@@ -124,7 +121,6 @@
 		plus_sign.setAttribute("width", "20");
 		plus_button.appendChild(plus_sign);
 		Button_area.appendChild(plus_button);
-
 		document.getElementById(parent_id).appendChild(Button_area);
 	}
   /*method that handles plus button click */
@@ -141,21 +137,7 @@
 	function clickertxt_info(txtbox_id){
 	return document.getElementById(txtbox_id).value;
 	}
-/*method that handles "send info" button click */
-	function sendinfo_press(){
-		if(document.getElementById("tableNO").value==""){
-		warningMsg();
-		}
-		else{
-			var food_order=[];
-			for(var i=0;i<food.length;i++){
-				if(clickertxt_info(food[i].food_name)!=0){
-				food_order[i]=food[i].food_name+", Antal: "+clickertxt_info(food[i].food_name)+"||";
-				}
-			}
-			return console.log(food_order);
-		}
-	}
+
 	/*method that creates warning msg*/
 	function warningMsg(){
 		document.getElementById("warningsign").style.visibility = "visible";
@@ -172,6 +154,10 @@
  			 th.setAttribute("id","mySauce"+i);
 			 th.setAttribute("class","cells");
  			 document.getElementById(parent_id).appendChild(th);
+			 /*Makes the last cell have the same distance from the right wall as the first one have from the left*/
+			 if(i==(sauce.length-1)){
+				 document.getElementById("mySauce"+i).style.paddingRight="100px";
+			 }
 
  			/*bild rubrik*/
  			var pic_heading = document.createElement("H4");
@@ -188,14 +174,14 @@
  			img.style.borderRadius="10px";
  			document.getElementById("mySauce"+i).appendChild(img);
 
-			/*necessary space*/
+			/*necessary space under the img*/
 				var h = document.createElement("P");
 				var t = document.createTextNode("                ");
 				h.appendChild(t);
 				document.getElementById("mySauce"+i).appendChild(h);
 
-			/*Beställning av mat*/
- 		 	var checkb_txt = document.createTextNode("Order");
+			/*ordering of food*/
+ 		 	var checkb_txt = document.createTextNode("Välj;");
  			var check_box = document.createElement("INPUT");
  			check_box.setAttribute("type", "checkbox");
  			check_box.setAttribute("id", "checkB"+i);
@@ -204,3 +190,75 @@
 
  		}
   }
+		/*method that handles the drinks*/
+function sauce_or(){
+	var sauce_order=[];
+	for(var i=0;i<sauce.length;i++){
+		if(document.getElementById("checkB"+i).checked){
+			sauce_order[i]=sauce[i].sauce_name;
+		}
+	}
+		if(sauce_order.length!==0){
+			return " Extra sås: "+sauce_order+", ";
+		}
+		else{
+			return"";
+		}
+}
+
+/*method that handles the food*/
+function food_or(){
+	var food_order=[];
+	for(var i=0;i<food.length;i++){
+		if(clickertxt_info(food[i].food_name)!=0){
+			food_order[i]=food[i].food_name+", Antal: "+clickertxt_info(food[i].food_name);
+		}
+	}
+	if(food_order.length!==0){
+		return food_order;
+	}
+	else{
+		return"";
+	}
+}
+
+/*method that handles the extra info box*/
+function txtbox_info(){
+	if(document.getElementById("txtBox").value===""){
+		return"";
+	}
+	else{
+		return ", Extra info: "+document.getElementById("txtBox").value;
+	}
+}
+
+function refresh(){
+	/* restart*/
+	for(var i=0;i<food.length;i++){
+		document.getElementById(food[i].food_name).value="";
+	}
+	for(var i=0;i<sauce.length;i++){
+		document.getElementById("checkB"+i).checked=false;
+				}
+	document.getElementById("txtBox").value="";
+	document.getElementById("tableNO").value="";
+}
+
+/*method that handles "send info" button click */
+	function sendinfo_press(){
+		if(document.getElementById("tableNO").value==""){
+		warningMsg();
+		}
+		else{
+			if(food_or()!==""){
+				if(sauce_or()!==""){
+					console.log(food_or()+sauce_or()+txtbox_info()+"||");
+					refresh()
+				}
+			else{
+				console.log(food_or()+txtbox_info()+"||");
+				refresh()
+			}
+		}
+	}
+}
