@@ -8,6 +8,14 @@
 		<title>Nation Bar</title>
 	</head>
 	<body id="body">
+		<nav>
+			<ul id="navBar">
+		  	<li><a class="active" href="#diner">Restaurang</a></li>
+		  	<li><a href="#kitchen">Köket</a></li> <!--Byt ut #kitchen mot länken till köket-->
+		  	<li><a href="#contact">Kontakta oss</a></li> <!--Byt ut #contact mot länken till kontakter-->
+		  	<li><a href="#about">Om oss</a></li> <!--Byt ut #about mot länken till about sidan-->
+			</ul>
+		</nav>
 		<div id="container">
 			<main id="head_div">
 			<h1>Välkommen till Nation Puben</h1>
@@ -45,13 +53,13 @@
 								<!--Text box reserved for extra info-->
 								<div ID="extrainfo_box" >
 									<h4>Extra information(allergier, egna önskemål mm).</h4>
-									<textarea id="txtBox" rows="4" cols="50" maxlength="100"></textarea>
+									<textarea id="txtBox" rows="5" cols="70" maxlength="207"></textarea>
 								</div>
 
 
 								<!--Table number selection box-->
 								<div id="tableNO_div" class="extraD">
-									Bordsnummer: <input type="number" id="tableNO" name="tableNumber" size="1000" min="1" max="15">
+									Bordsnummer*: <input type="number" id="tableNO" name="tableNumber" min="1" max="15">
 
 								</div>
 
@@ -62,7 +70,7 @@
 										<img src="http://images.clipartbro.com/4/green-tick-4984.png" width="20" height="20">
 										Send Info
 									</button>
-									<div id="warningsign" style="visibility: hidden" ><h5 style="color:red">Obs! Fyll i bordsnummer</h5>
+									<div id="warningsign" style="visibility: hidden" ><h5 style="color:red">OBS! Fyll i bordsnummer</h5>
 									</div>
 								</div>
 							</div>
