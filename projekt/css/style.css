@@ -1,31 +1,241 @@
+@import 'http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200';
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100';
+
 body{
-	height:1200px;
-	width: 1500px;
-	font-family: arial;
+
+	font-family: "Alegreya Sans SC", sans-serif;
 	font-size:12pt;
-	background-color:0;
+	background-color: black;
 	margin-left:auto;
 	margin-right:auto;
+	color: white;
+
 
 }
+
 section{
 	width: 1300px;
 	text-align:center;
-	text-align:center;
-	border: 5px dotted #ccc;
-	margin-top:20px;
+	border: 5px double #ccc;
+	margin-top:60px;
 	height:500px;
 
 }
+
+section.foodNdrink {
+	height:500px;@import 'http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200';
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:100';
+
+body{
+
+	font-size:12pt;
+	background-color: black;
+	margin-left:auto;
+	margin-right:auto;
+	color: white;
+
+
+}
+
+section{
+	width: 1300px;
+	text-align:center;
+	border: 5px double #ccc;
+	margin-top:40px;
+	height:500px;
+
+}
+
 section.foodNdrink {
 	height:500px;
 }
+
 .cells{
 	padding-left:100px;
 }
 
+#head{
+
+	max-height: 400px;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+	opacity: 0.9;
+	margin-top: 30px;
+	z-index:100;
+
+}
+
+#navBar{
+
+	font-family: "Alegreya Sans SC", sans-serif;
+	list-style-type: none;
+	padding: 30px;
+	width: 1000px;
+	display: inline;
+
+}
+
+li{
+
+
+}
+
+a{
+
+	text-decoration: none;
+	float: center;
+	margin:  30px;
+	margin-top: 0px;
+	display: inline;
+	padding: 20px;
+	font-size: 25px;
+	color: white;
+}
+
+a:hover{
+
+	color: white;
+	text-decoration: underline;
+
+}
+
+a:active{
+
+	text-decoration: underline;
+}
+
+#h2{
+
+	font-family:  "Alegreya Sans SC", sans-serif;
+}
+
 #burg_div{
+
+	color: white;
+	font-family: "Yanone Kaffeesatz";
 	/* display: flex; */
+
+}
+#dryck_div{
+
+	 /* display: flex;	 */
+}
+
+#footer{
+	text-align:right;
+}
+#extrainfo_box{
+	flex:1;
+	order:1;
+	height: 130px;
+
+}
+#tableNO_div{
+	flex:1;
+	order:2;
+	height: 125px;
+}
+#tableNO{
+	margin-top: 80px;
+}
+#send_button{
+	margin-top: 80px;
+}
+#sendB_div{
+flex:1;
+order:3;
+height: 125px;
+}
+#testB{
+	display: flex;
+	height: 250px;
+}
+
+button:hover{
+    background-color:white;
+	text-align:center;
+}
+textarea{
+	border:Ridge;
+	border-color:#232b2b;
+}
+button{
+	 /*border-radius:10px; 	*/
+}
+
+div.scrollmenu {
+  overflow: auto;
+	height: 430px;
+}
+
+
+#addable_stuff{
+	height: 250px;
+	border: 1px dotted #ccc;
+}
+}
+
+.cells{
+	padding-left:100px;
+}
+
+#head{
+
+	max-height: 400px;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+	opacity: 0.9;
+	margin: 30px;
+	z-index:100;
+
+}
+
+#navBar{
+
+	list-style-type: none;
+	padding: 30px;
+	width: 1000px;
+	display: inline;
+
+}
+
+li{
+
+	display: inline;
+}
+
+a{
+
+	text-decoration: none;
+	float: center;
+	display: inline;
+	padding: 20px;
+	font-size: 25px;
+	color: white;
+}
+
+a:hover{
+
+	color: white;
+	text-decoration: underline;
+
+}
+
+a:active{
+
+	text-decoration: underline;
+}
+
+#burg_div{
+
+	color: white;
+	font-family: "Yanone Kaffeesatz";
+	/* display: flex; */
+
 }
 #dryck_div{
 
