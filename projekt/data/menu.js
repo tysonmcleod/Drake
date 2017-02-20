@@ -57,6 +57,37 @@ var food = [
 	}
 ];
 
+
+
+var drinks = [
+	{
+		"drink_name": "Cola",
+		"img_link": "http://pngimg.com/uploads/cocacola/cocacola_PNG5.png"
+	},
+	{
+		"drink_name": "Fanta",
+		"img_link": "http://www.mazalv.com/wp-content/uploads/2016/11/fanta-1.png"
+	},
+	{
+		"drink_name": "Beer",
+		"img_link": "http://360telemetry.com/wp-content/uploads/2013/01/beer.jpg"
+	},
+	{
+		"drink_name": "Vodka",
+		"img_link": "http://static.vinepair.com/wp-content/uploads/2017/01/absolut-social.jpg"
+	},
+	{
+		"drink_name": "Cocaine",
+		"img_link": "https://images.vice.com/motherboard/content-images/article/14871/1409321948510380.jpg"
+	},
+	{
+		"drink_name": "Weed",
+		"img_link": "https://s-media-cache-ak0.pinimg.com/originals/72/ed/28/72ed2867893c53e29efe1c25b360836d.jpg"
+	}
+];
+
+
+
 var sauce = [
 	{
 		"sauce_name": "Vitlökssås",
@@ -95,4 +126,3 @@ var sauce = [
 		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
 	},
 ];
-
