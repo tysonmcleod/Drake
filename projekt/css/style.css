@@ -34,7 +34,7 @@ li a:hover:not(.active) {
 }
 #container{
 	margin-left: 15%;
-	padding:1px 16px;
+	padding: 16px 16px;
 	height:auto;
 }
 section{
