@@ -7,12 +7,13 @@ body{
 nav{
 	width:285;
 	height:488;
+
 }
-nav ul {
+nav #navBar {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 15%;
+		width: 20%;
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
@@ -33,7 +34,7 @@ li a:hover:not(.active) {
     color: white;
 }
 #container{
-	margin-left: 15%;
+	margin-left: 20%;
 	padding:1px 16px;
 	height:auto;
 }
@@ -47,8 +48,6 @@ section{
 }
 section.foodNdrink {
 	height:500px;
-}
-
 }
 .cells{
 	padding-left:100px;
@@ -99,4 +98,15 @@ height: 250px;
 }
 .scrollmenu{
 	border: 2px dotted #ccc;
+}
+#order_listDiv{
+margin-top: 100px;
+margin-left: 35px;
+background-color: white;
+height: 500px;
+width: 300px;
+text-align:center;
+overflow: auto;
+border-radius: 10px;
+border: black Ridge;
 }

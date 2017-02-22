@@ -17,7 +17,7 @@ var food = [
 	"food_name": "Veggoburgare",
 	"price": "80kr",
 	"lactose": true,
-	"gluten": true,
+	"gluten": false,
 	"img_link": "http://lisaoerikshalsoblogg.ellematovin.se/wp-content/uploads/sites/17/2016/02/Veggie-Burger.jpg"
 	},
 	{
@@ -57,37 +57,6 @@ var food = [
 	}
 ];
 
-
-
-var drinks = [
-	{
-		"drink_name": "Cola",
-		"img_link": "http://pngimg.com/uploads/cocacola/cocacola_PNG5.png"
-	},
-	{
-		"drink_name": "Fanta",
-		"img_link": "http://www.mazalv.com/wp-content/uploads/2016/11/fanta-1.png"
-	},
-	{
-		"drink_name": "Beer",
-		"img_link": "http://360telemetry.com/wp-content/uploads/2013/01/beer.jpg"
-	},
-	{
-		"drink_name": "Vodka",
-		"img_link": "http://static.vinepair.com/wp-content/uploads/2017/01/absolut-social.jpg"
-	},
-	{
-		"drink_name": "Cocaine",
-		"img_link": "https://images.vice.com/motherboard/content-images/article/14871/1409321948510380.jpg"
-	},
-	{
-		"drink_name": "Weed",
-		"img_link": "https://s-media-cache-ak0.pinimg.com/originals/72/ed/28/72ed2867893c53e29efe1c25b360836d.jpg"
-	}
-];
-
-
-
 var sauce = [
 	{
 		"sauce_name": "Vitlökssås",
@@ -126,3 +95,35 @@ var sauce = [
 		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
 	},
 ];
+var drink = [
+	{
+		"drink_name":"Kalla drycker",
+		"img_link":"http://captainquizz.s3.amazonaws.com/quizz/54b5010016eba4.23916311.jpg",
+		"drink0":"Inget",
+		"drink1": "Cola",
+		"drink2": "Fanta",
+		"drink3": "Sprite",
+		"drink4": "Zingo",
+		"drink5": "Trocadero"
+	},
+	{
+		"drink_name":"Varma drycker",
+		"img_link":"http://kaffe.handla-online.org/gevalia-kaffe.jpg",
+		"drink0":"Inget",
+		"drink1": "Svart kaffe",
+		"drink2": "Cappuccino",
+		"drink3": "Café au lait",
+		"drink4": "Café au Chocolat",
+		"drink5": "Varm choklad"
+	},
+	{
+		"drink_name":"Öl drycker",
+		"img_link":"http://captainquizz.s3.amazonaws.com/quizz/54b5010016eba4.23916311.jpg",
+		"drink0":"Inget",
+		"C_drink1": "Öl A",
+		"C_drink2": "Öl B",
+		"C_drink3": "Öl C",
+		"C_drink4": "Öl D",
+		"C_drink5": "Öl E"
+	},
+]
