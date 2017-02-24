@@ -12,8 +12,12 @@
 			<ul id="navBar">
 		  	<li><a class="active" href="#diner">Restaurang</a></li>
 		  	<li><a href="#kitchen">Köket</a></li> <!--Byt ut #kitchen mot länken till köket-->
-		  	<li><a href="#contact">Kontakta oss</a></li> <!--Byt ut #contact mot länken till kontakter-->
-		  	<li><a href="#about">Om oss</a></li> <!--Byt ut #about mot länken till about sidan-->
+
+				<div id="order_listDiv">
+					<h3>Beställning</h3>
+					<ul id="order_list">
+					</ul>
+				</div>
 			</ul>
 		</nav>
 		<div id="container">
@@ -26,11 +30,11 @@
 
 				<h2>Välj burgare</h2>
 					<div ID="Burg_div" class="scrollmenu">
-											</div>
+					</div>
 			</section>
 
 			<!--Beverage section-->
-			<section class ="foodNdrink">
+			<section class="foodNdrink">
 				<h2>Välj läsk/dryck</h2>
 					<div ID="dryck_div" class="scrollmenu">
 				</div>
@@ -73,7 +77,6 @@
 			</div>
 		</div>
 		 <script>disp_food("Burg_div")</script>
-		 <script>disp_drink("dryck_div")</script>
 		 <script>displayExtra_Alternative("addable_stuff")</script>
 	</body>
 </html>
