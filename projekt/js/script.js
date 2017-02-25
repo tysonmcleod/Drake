@@ -13,12 +13,13 @@
 				cells(parent_id,i,"myTH"+i);
 			 /*Makes the last cell have the same distance from the right wall as the first one have from the left*/
 			 if(i==(food.length-1)){
-				 document.getElementById("myTH"+i).style.paddingRight="100px";
+			 /* only within the its acutal section which does not matter */
+				 document.getElementById("myTH"+i).style.paddingRight="3em";
 			 }
 			/*img heading*/
 				img_heading("myTH"+i,i,"food");
 			/*image*/
-				img("myTH"+i,i,"food","200px");
+				img("myTH"+i,i,"food","3em");
 			/*food info*/
 				food_info("myTH"+i,i,"food");
 			/*plus&minus clicker*/
@@ -61,7 +62,7 @@
 		img.style.height = img_size;
 		img.style.width = img_size;
 		img.style.border = "white Ridge";
-		img.style.borderRadius="10px";
+		img.style.borderRadius="1em";
 		document.getElementById(parent_id).appendChild(img);
 	}
 	function checkboX(parent_id,index){
@@ -288,7 +289,7 @@
 			img_heading("mySauce"+i,i,"sauce");
 
  			/*pictures */
-			img("mySauce"+i,i,"sauce","100px");
+			img("mySauce"+i,i,"sauce","3em");
 
 			/*necessary space under the img*/
 				var h = document.createElement("P");
