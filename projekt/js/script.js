@@ -19,11 +19,11 @@
 			/*img heading*/
 				img_heading("myTH"+i,i,"food");
 			/*image*/
-				img("myTH"+i,i,"food","3em");
+				img("myTH"+i,i,"food","3em","food");
 			/*food info*/
-				food_info("myTH"+i,i,"food");
+				//food_info("myTH"+i,i,"food");
 			/*plus&minus clicker*/
-				plus_minus_clicker("myTH"+i,i);
+				//plus_minus_clicker("myTH"+i,i);
 		 }
 	}
 	/*Cells in table*/
@@ -49,7 +49,7 @@
 			document.getElementById(parent_id).appendChild(pic_heading);
 
 	}
-	function img(parent_id,index,item,img_size){
+	function img(parent_id,index,item,img_size,type){
 		var img = document.createElement("img");
 
 		if(item==="food"){
@@ -64,6 +64,22 @@
 		img.style.border = "white Ridge";
 		img.style.borderRadius="1em";
 		document.getElementById(parent_id).appendChild(img);
+
+		img.onmouseover = function(){
+			img.style.opacity = "0.5";
+		}
+		img.onmouseout = function(){
+			img.style.opacity = "1";
+			document.getElementById(parent_id).style.backgroundImage = "none"
+		}
+		img.onclick=function(){
+			if(type=="sauce"){
+				orderNav_bar(sauce[index].sauce_name,index,"sauce")
+		}
+			else if(type=="food"){
+				orderNav_bar(food[index].food_name,index,"food");
+			}
+		}
 	}
 	function checkboX(parent_id,index){
 		var checkb_txt = document.createTextNode("Välj;");
@@ -289,7 +305,7 @@
 			img_heading("mySauce"+i,i,"sauce");
 
  			/*pictures */
-			img("mySauce"+i,i,"sauce","3em");
+			img("mySauce"+i,i,"sauce","3em","sauce");
 
 			/*necessary space under the img*/
 				var h = document.createElement("P");
@@ -298,7 +314,7 @@
 				document.getElementById("mySauce"+i).appendChild(h);
 
 			/*ordering of food*/
-			checkboX("mySauce"+i,i);
+			//checkboX("mySauce"+i,i);
 		}
   }
 	function sent_order(){
@@ -322,6 +338,14 @@
 		var ol_list= document.getElementById('order_list');
 		//ul_list("list_test"+index,ol_list,index);
 		//del_button(parent_id)
+		L_order.ondblclick=function(){
+			if(type=="sauce"){
+				del_Element("sauce"+index);
+			}
+			else if(type=="food"){
+				del_Element("food"+index);
+			}
+}
 	}
 	function ul_list(parent_id,list,index){
 		var Button_area = document.createElement("DIV");
