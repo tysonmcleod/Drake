@@ -5,7 +5,7 @@
 				document.addEventListener('DOMConetentLoaded', fn);
 		}
 	}
-
+iindex=0;
 	/*Function that displays the food*/
 	function disp_food(parent_id){
 		 for(var i=0;i<food.length;i++){
@@ -59,7 +59,7 @@
 		else if(item==="sauce"){
 			img.setAttribute("src",sauce[index].img_link);
 		}
-		img.setAttribute("class","images");
+
 		img.style.height = img_size;
 		img.style.width = img_size;
 		img.style.border = "white Ridge";
@@ -81,6 +81,7 @@
 				food_check(parent_id,index);
 				document.getElementById('lactose'+index).checked=false;
 				document.getElementById('gluten'+index).checked=false;
+				iindex++;
 			}
 		}
 	}
@@ -368,6 +369,21 @@
 
 	/*adds the order info to the order div in the navbar*/
 	function orderNav_bar(order,index,type){
+		if(type==="food"){
+		var L_order=document.createElement("LI");
+		L_order.ondblclick=function(){
+			return del_Element(this.id);
+		}
+		L_order.setAttribute("id",type+iindex);
+		var textnode=document.createElement("P");
+		textnode.setAttribute("id","txtN"+iindex);
+		var order_txt=document.createTextNode(order);
+		textnode.appendChild(order_txt);
+		L_order.appendChild(textnode);
+		document.getElementById('order_list').appendChild(L_order);
+		var ol_list= document.getElementById('order_list');
+	}
+	else{
 		var L_order=document.createElement("LI");
 		L_order.setAttribute("id",type+index);
 		var textnode=document.createElement("P");
@@ -377,16 +393,19 @@
 		L_order.appendChild(textnode);
 		document.getElementById('order_list').appendChild(L_order);
 		var ol_list= document.getElementById('order_list');
+
+	}
 		//ul_list("list_test"+index,ol_list,index);
 		//del_button(parent_id)
-		L_order.ondblclick=function(){
-			if(type=="sauce"){
-				del_Element("sauce"+index);
-			}
-			else if(type=="food"){
-				del_Element("food"+index);
-			}
-}
+		// L_order.ondblclick=function(){
+		// 	if(type=="sauce"){
+		// 		del_Element("sauce"+index);
+		// 	}
+		// 	else if(type=="food"){
+		// 		console.log(type+iindex;)
+		// 		del_Element("food"+);//////Fixa///////
+		// 	}
+		// }
 	}
 	function ul_list(parent_id,list,index){
 		var Button_area = document.createElement("DIV");
