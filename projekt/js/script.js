@@ -19,11 +19,12 @@
 			/*img heading*/
 				img_heading("myTH"+i,i,"food");
 			/*image*/
-				img("myTH"+i,i,"food","3em");
+				img("myTH"+i,i,"food","5em","food");
 			/*food info*/
-				food_info("myTH"+i,i,"food");
+				//food_info("myTH"+i,i,"food");
 			/*plus&minus clicker*/
-				plus_minus_clicker("myTH"+i,i);
+				//plus_minus_clicker("myTH"+i,i);
+				lactoseNgluten("myTH"+i,i);
 		 }
 	}
 	/*Cells in table*/
@@ -49,7 +50,7 @@
 			document.getElementById(parent_id).appendChild(pic_heading);
 
 	}
-	function img(parent_id,index,item,img_size){
+	function img(parent_id,index,item,img_size,type){
 		var img = document.createElement("img");
 
 		if(item==="food"){
@@ -64,7 +65,40 @@
 		img.style.border = "white Ridge";
 		img.style.borderRadius="1em";
 		document.getElementById(parent_id).appendChild(img);
+
+		img.onmouseover = function(){
+			img.style.opacity = "0.5";
+		}
+		img.onmouseout = function(){
+			img.style.opacity = "1";
+			document.getElementById(parent_id).style.backgroundImage = "none"
+		}
+		img.onclick=function(){
+			if(type=="sauce"){
+				orderNav_bar(sauce[index].sauce_name,index,"sauce");
+		}
+			else if(type=="food"){
+				food_check(parent_id,index);
+				document.getElementById('lactose'+index).checked=false;
+				document.getElementById('gluten'+index).checked=false;
+			}
+		}
 	}
+	function food_check(parent_id,index){
+		if(document.getElementById('gluten'+index).checked===true &&
+						 document.getElementById('lactose'+index).checked===true){
+			 return orderNav_bar(food[index].food_name+"(Gluten-och laktosfri)",index,"food");
+		 }
+		else if(document.getElementById('lactose'+index).checked===true){
+			return orderNav_bar(food[index].food_name+"(Laktosfri)",index,"food");
+		}
+		else if(document.getElementById('gluten'+index).checked===true){
+			return orderNav_bar(food[index].food_name+"(Glutenfri)",index,"food");
+		}
+		else{
+		return orderNav_bar(food[index].food_name,index,"food");
+		}
+}
 	function checkboX(parent_id,index){
 		var checkb_txt = document.createTextNode("Välj;");
 		var check_box = document.createElement("INPUT");
@@ -81,6 +115,29 @@
 		};
 		document.getElementById(parent_id).appendChild(checkb_txt);
 		document.getElementById(parent_id).appendChild(check_box);
+	}
+
+	/*method display lactose n gluten checkboxes*/
+	function lactoseNgluten(parent_id,index) {
+		var div = document.createElement("DIV");
+		div.setAttribute("id","LnGDiv"+index);
+		var hej=document.createElement("br")
+		var lactose = document.createElement("lactose");
+		var checkb_txt1 = document.createTextNode("Laktosfri;");
+		var check_box1 = document.createElement("INPUT");
+		check_box1.setAttribute("type", "checkbox");
+		check_box1.setAttribute("id", "lactose"+index);
+		var gluten = document.createElement("gluten");
+		var checkb_txt2 = document.createTextNode("Glutenfri;");
+		var check_box2 = document.createElement("INPUT");
+		check_box2.setAttribute("type", "checkbox");
+		check_box2.setAttribute("id", "gluten"+index);
+		div.appendChild(checkb_txt1);
+		div.appendChild(check_box1);
+		div.appendChild(hej);
+		div.appendChild(checkb_txt2);
+		div.appendChild(check_box2);
+		document.getElementById(parent_id).appendChild(div);
 	}
 
 	/*method that shows info about the food*/
@@ -289,7 +346,7 @@
 			img_heading("mySauce"+i,i,"sauce");
 
  			/*pictures */
-			img("mySauce"+i,i,"sauce","3em");
+			img("mySauce"+i,i,"sauce","3em","sauce");
 
 			/*necessary space under the img*/
 				var h = document.createElement("P");
@@ -298,7 +355,7 @@
 				document.getElementById("mySauce"+i).appendChild(h);
 
 			/*ordering of food*/
-			checkboX("mySauce"+i,i);
+			//checkboX("mySauce"+i,i);
 		}
   }
 	function sent_order(){
@@ -322,6 +379,14 @@
 		var ol_list= document.getElementById('order_list');
 		//ul_list("list_test"+index,ol_list,index);
 		//del_button(parent_id)
+		L_order.ondblclick=function(){
+			if(type=="sauce"){
+				del_Element("sauce"+index);
+			}
+			else if(type=="food"){
+				del_Element("food"+index);
+			}
+}
 	}
 	function ul_list(parent_id,list,index){
 		var Button_area = document.createElement("DIV");

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<!-- head --> 
+	<!-- head -->
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	 	<script type="text/javascript" src="data/menu.js"></script>
@@ -20,17 +20,16 @@
 			<div id="left">
 				<nav>
 					<ul id="navBar">
-		  			
 		  			<li><a href="kitchen.html">Köket</a></li> <!--Byt ut #kitchen mot länken till köket-->
-		  			</ul>
+		  		</ul>
 	<!-- orders listed in side bar -->
-					<h3 id ="orderH3">Beställningar</h3>
+
 					<div id="order_listDiv">
-					
+					<h3 id ="orderH3">Beställningar</h3>
 					<ul id="order_list">
 					</ul>
 					</div>
-					
+					<h5>Obs: Dubbelklicka på objekt i listan för att ta bort dem</h5>
 				</nav>
 			</div>
 
@@ -42,10 +41,19 @@
 					<h2> Välj burgare </h2>
 					<div id="Burg_div" class="scrollmenu"></div>
 				</div>
-	<!-- extras part of the right section -->
-				<div id="extrainfo">
+	<!-- sauce part of the right section -->
+				<div id="sauce_div">
 					<h2> Tillbehör </h2>
 					<div id="addable_stuff" class="scrollmenu"></div>
+				</div>
+	<!-- drink part of the right section -->
+				<div id="drink">
+					<h2> Välj läsk/kaffe/dryck </h2>
+					<div id ="dryck_div" class = "scrollmenu"></div>
+				</div>
+	<!-- extras part of the right section -->
+				<h2>Ange informationen och skicka in beställningen</h2>
+				<div id="extrainfo" class = "scrollmenu">
 					<div id="testB">
 	<!--Text box reserved for extra info-->
 					<div ID="extrainfo_box" >
@@ -58,7 +66,7 @@
 					</div>
 	<!--Send info button-->
 					<div id="sendB_div" class="extraD">
-						<button type="submit" id="send_button" onclick="sendinfo_press()">
+						<button type="submit" id="send_button" onclick="sendinfo_press()" style="height:30px;width:10;font-size:14pt;">
 						<img src="http://images.clipartbro.com/4/green-tick-4984.png" width="20" height="20">
 						Send Info
 						</button>
@@ -66,14 +74,9 @@
 					</div>
 					</div>
 				</div>
-	<!-- drink part of the right section -->
-			<div id="drink">
-				<h2> Välj läsk/kaffe/dryck </h2>
-				<div id ="dryck_div" class = "scrollmenu"></div>
-			</div>	
 
 
-	<!-- end of the right section --> 
+	<!-- end of the right section -->
 			</div>
 
 	<!-- end of container -->

@@ -1,223 +1,129 @@
-html, body{
-	width: 100%;
-	height: 100%;
-	overflow-x: hidden;
-	position: fixed;
-
-}
 
 body{
-	margin:0;
-	font-size: 12pt;
+	margin: 0;
 	font-family: arial;
-	 background-image: url("../images/grid.png");
+	font-size:12pt;
+}
+h2 {
+    margin-top: 0;
 }
 
-.container{
-	position: relative;
-	padding: 0 0 0 15%;
-	display: flex;
-	height: 100%;
-	overflow: hidden;
-}
-
-#left{
-	
-	top: 0; bottom: 0; left: 0;
-	
-	position: absolute;
-	width: 15%;
-	
-}
-
-#right{
-	
-	
-	bottom: 0;
-	width: 100%;
-	padding-left: 1em;
-	padding-right: 1em;
-
-}
-
-
-
-div.scrollmenu {
-  	overflow: auto;
-	height: 33%;
-	border: 1px solid black;
-	padding-left: 10px;
-	bottom: 0;
-	
-}
-
-
-#navBar {
-	position: relative;
-	list-style-type: none;
-	margin:0;
-	padding:0;
-	background-color: #f1f1f1;
-	width: 100%;
-	height: 100%;
-	
+/*nav{
+	width:285;
+	height:488;
+}*/
+nav #navBar {
+    list-style-type: none;
+    /*margin: 0;
+    padding: 0;
+    width: 15%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;*/
 }
 li a {
     display: block;
     color: #000;
-    padding: 3em 3em;
+    padding: 16px 32px;
     text-decoration: none;
-    font-size: 15pt;
-    position: relative;
 }
-
 li a.active {
     background-color: black;
     color: white;
 }
-
 li a:hover:not(.active) {
     background-color: #555;
     color: white;
 }
-
-.cells{
-	padding-left:1em;
-
+#container{
+	/*margin-left: 15%;*/
+	padding:1px 16px;
+	height:auto;
+}
+#left{
+	  width: 19%;
+		list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+#right{
+	margin-left: 20%;
+}
+section{
+	width: 1300px;
+	text-align:center;
+	border: 5px dotted #ccc;
+	margin-top:20px;
+	height:500px;
+}
+section.foodNdrink {
+	height:500px;
 }
 
+}
+.cells{
+	padding-left:100px;
+}
+#footer{
+	text-align:right;
+	width: 1310px;
+}
 #extrainfo_box{
 	flex:3;
 	order:1;
-	
+	height: 130px;
 }
-
-
 #tableNO_div{
 	flex:1;
 	order:2;
-	height: 1em;
+	height: 125px;
 }
-
 #tableNO{
-	margin-top: 1em;
+	margin-top: 80px;
 }
 #send_button{
-	margin-top: 1em;
+	margin-top: 80px;
 }
-
 #sendB_div{
 flex:1;
 order:3;
-height: 1em;
+height: 125px;
 }
-
-
 #testB{
 	display: flex;
-	height: 1%;
+	height: 250px;
 }
-
 button:hover{
     background-color:white;
 		text-align:center;
 }
-
 textarea{
 	border:Ridge;
 	border-color:#232b2b;
 }
-
+div.scrollmenu {
+  overflow: auto;
+	height: 30vh;
+}
 #addable_stuff{
-height: 38%;
+height: 20vh;
 }
-
-#extrainfo{
-	height: 40%;
-	
+.scrollmenu{
+	border: 2px dotted #ccc;
 }
-#drink{
-	height: 27%;
-	
-}
-
-
-#myUL0{
-	font-size: 0.7em;
-	list-style-type: none;
-	list-style-position: outside;
-}
-#myUL1{
-	font-size: 0.7em;
-	list-style-type: none;
-	list-style-position: outside;
-}
-
-#myUL2{
-	font-size: 0.7em;
-	list-style-type: none;
-	list-style-position: outside;
-}
-
-#myUL3{
-	font-size: 0.7em;
-	list-style-type: none;
-	list-style-position: outside;
-}
-
-#myUL4{
-	font-size: 0.7em;
-	list-style-type: none;
-	list-style-position: outside;
-}
-
-#myUL5{
-	font-size: 0.7em;
-	list-style-type: none;
-	list-style-position: outside;
-}
-
-#myUL6{
-	font-size: 0.7em;
-	list-style-type: none;
-	list-style-position: outside;
-}
-#myUL7{
-	font-size: 0.7em;
-	list-style-type: none;
-	list-style-position: outside;
-}
-#foodNdrink{
-	
-}
-
-textarea{
-	height: 3em;
-
-}
-
 #order_listDiv{
-margin-left: 10%;
-margin-top: 7%;
-margin-bottom: 7%;
-margin-right: 3%;
+margin-top: 100px;
+margin-left: 35px;
 background-color: white;
-height: 500px;
-width: 70%;
+height: 30em;
+width: 15em;
 text-align:center;
 overflow: auto;
 border-radius: 10px;
 border: black Ridge;
-padding-left: 0;
-padding-right: 3%;
-padding-bottom: 3%;
 }
-#orderH3{
-	margin-left:20%;
-	position: relative;
-}
-#order_list{
-	list-style-type: none;
-	padding-left: 0;
-}
-
