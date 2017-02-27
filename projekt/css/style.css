@@ -108,10 +108,10 @@ textarea{
 }
 div.scrollmenu {
   overflow: auto;
-	height: 430px;
+	height: 30vh;
 }
 #addable_stuff{
-height: 250px;
+height: 20vh;
 }
 .scrollmenu{
 	border: 2px dotted #ccc;

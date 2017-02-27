@@ -19,11 +19,12 @@
 			/*img heading*/
 				img_heading("myTH"+i,i,"food");
 			/*image*/
-				img("myTH"+i,i,"food","3em","food");
+				img("myTH"+i,i,"food","5em","food");
 			/*food info*/
 				//food_info("myTH"+i,i,"food");
 			/*plus&minus clicker*/
 				//plus_minus_clicker("myTH"+i,i);
+				lactoseNgluten("myTH"+i,i);
 		 }
 	}
 	/*Cells in table*/
@@ -74,13 +75,30 @@
 		}
 		img.onclick=function(){
 			if(type=="sauce"){
-				orderNav_bar(sauce[index].sauce_name,index,"sauce")
+				orderNav_bar(sauce[index].sauce_name,index,"sauce");
 		}
 			else if(type=="food"){
-				orderNav_bar(food[index].food_name,index,"food");
+				food_check(parent_id,index);
+				document.getElementById('lactose'+index).checked=false;
+				document.getElementById('gluten'+index).checked=false;
 			}
 		}
 	}
+	function food_check(parent_id,index){
+		if(document.getElementById('gluten'+index).checked===true &&
+						 document.getElementById('lactose'+index).checked===true){
+			 return orderNav_bar(food[index].food_name+"(Gluten-och laktosfri)",index,"food");
+		 }
+		else if(document.getElementById('lactose'+index).checked===true){
+			return orderNav_bar(food[index].food_name+"(Laktosfri)",index,"food");
+		}
+		else if(document.getElementById('gluten'+index).checked===true){
+			return orderNav_bar(food[index].food_name+"(Glutenfri)",index,"food");
+		}
+		else{
+		return orderNav_bar(food[index].food_name,index,"food");
+		}
+}
 	function checkboX(parent_id,index){
 		var checkb_txt = document.createTextNode("Välj;");
 		var check_box = document.createElement("INPUT");
@@ -97,6 +115,29 @@
 		};
 		document.getElementById(parent_id).appendChild(checkb_txt);
 		document.getElementById(parent_id).appendChild(check_box);
+	}
+
+	/*method display lactose n gluten checkboxes*/
+	function lactoseNgluten(parent_id,index) {
+		var div = document.createElement("DIV");
+		div.setAttribute("id","LnGDiv"+index);
+		var hej=document.createElement("br")
+		var lactose = document.createElement("lactose");
+		var checkb_txt1 = document.createTextNode("Laktosfri;");
+		var check_box1 = document.createElement("INPUT");
+		check_box1.setAttribute("type", "checkbox");
+		check_box1.setAttribute("id", "lactose"+index);
+		var gluten = document.createElement("gluten");
+		var checkb_txt2 = document.createTextNode("Glutenfri;");
+		var check_box2 = document.createElement("INPUT");
+		check_box2.setAttribute("type", "checkbox");
+		check_box2.setAttribute("id", "gluten"+index);
+		div.appendChild(checkb_txt1);
+		div.appendChild(check_box1);
+		div.appendChild(hej);
+		div.appendChild(checkb_txt2);
+		div.appendChild(check_box2);
+		document.getElementById(parent_id).appendChild(div);
 	}
 
 	/*method that shows info about the food*/
