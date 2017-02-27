@@ -128,11 +128,15 @@ iindex=0;
 		var check_box1 = document.createElement("INPUT");
 		check_box1.setAttribute("type", "checkbox");
 		check_box1.setAttribute("id", "lactose"+index);
+		check_box1.style.height = "2em";
+		check_box1.style.width = "2em";
 		var gluten = document.createElement("gluten");
 		var checkb_txt2 = document.createTextNode("Glutenfri;");
 		var check_box2 = document.createElement("INPUT");
 		check_box2.setAttribute("type", "checkbox");
 		check_box2.setAttribute("id", "gluten"+index);
+		check_box2.style.height = "2em";
+		check_box2.style.width = "2em";
 		div.appendChild(checkb_txt1);
 		div.appendChild(check_box1);
 		div.appendChild(hej);
@@ -385,6 +389,9 @@ iindex=0;
 	}
 	else{
 		var L_order=document.createElement("LI");
+		L_order.ondblclick=function(){
+			return del_Element(this.id);
+		}
 		L_order.setAttribute("id",type+index);
 		var textnode=document.createElement("P");
 		textnode.setAttribute("id","txtN"+index);
@@ -455,12 +462,14 @@ function sauce_or(){
 /*method that handles the food order*/
 function food_or(){
 	var food_order="";
-	for(var i=0;i<food.length;i++){
-		if(clickertxt_info(food[i].food_name)!=0 && clickertxt_info(food[i].food_name)!=""){
-			food_order=food_order+food[i].food_name+":"+clickertxt_info(food[i].food_name)+"st, ";
+	 var list = document.getElementById("order_list");
+	 var list_items = list.getElementsByTagName("li");
+	for(var i=0;i<list_items.length;i++){
+		if(list_items[i].textContent!=""){
+			food_order=food_order+list_items[i].textContent+", ";
 		}
 	}
-	if(food_order.length!==0){
+	if(list_items.length!==0){
 		return food_order+" | ";
 	}
 	else{
@@ -483,12 +492,6 @@ function table_NO(){
 }
 	/* "refresh" the page*/
 function refresh(){
-	for(var i=0;i<food.length;i++){
-		document.getElementById(food[i].food_name).value="";
-	}
-	for(var i=0;i<sauce.length;i++){
-		document.getElementById("checkB"+i).checked=false;
-				}
 	document.getElementById("txtBox").value="";
 	document.getElementById("tableNO").value="";
 }
@@ -504,14 +507,7 @@ function ul(){
 			 document.getElementById("tableNO").value>15|| food_or()==""){
 				 disp_warningMsg();
 		}
-		else{
-				if(sauce_or()!==""){
-					console.log(food_or()+sauce_or()+txtbox_info()+table_NO()+"||");
-					refresh()
-					del_Element("order_list");
-					ul()
-					sent_order();
-				}
+
 			else{
 				console.log(food_or()+txtbox_info()+table_NO()+"||");
 				refresh()
@@ -520,4 +516,3 @@ function ul(){
 				sent_order();
 			}
 		}
-	}
