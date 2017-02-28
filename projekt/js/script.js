@@ -576,6 +576,4 @@ function ul(){
 				sent_order();
 			}
 		}
-	}
-
-
+	
