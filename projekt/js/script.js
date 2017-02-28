@@ -47,8 +47,8 @@ iindex=0;
 			else if(item==="drinks"){
 			var txt = document.createTextNode(drinks[index].drink_name);
 			}
-			pic_heading.appendChild(txt);
-			document.getElementById(parent_id).appendChild(pic_heading);
+			/*pic_heading.appendChild(txt);*/
+			/*document.getElementById(parent_id).appendChild(pic_heading);*/
 
 	}
 	function img(parent_id,index,item,img_size,type){
@@ -491,6 +491,7 @@ function sauce_or(){
 			return"";
 		}
 }
+
 /*method that handles the drink order*/
 function drink_or(){
 	var drinks_order="";

@@ -7,6 +7,7 @@
 	 	<script type="text/javascript" src="data/menu.js"></script>
 		<script src="js\script.js"></script>
 		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>majorkey</title>
 	</head>
 	<!-- end of head -->
@@ -52,8 +53,9 @@
 					<div id ="dryck_div" class = "scrollmenu"></div>
 				</div>
 	<!-- extras part of the right section -->
-				<h2>Ange informationen och skicka in beställningen</h2>
+				
 				<div id="extrainfo">
+					<h2>Ange informationen och skicka in beställningen</h2>
 					<div id="testB">
 	<!--Text box reserved for extra info-->
 					<div ID="extrainfo_box" >
@@ -62,13 +64,14 @@
 					</div>
 	<!--Table number selection box-->
 					<div id="tableNO_div" class="extraD">
-					Bordsnummer*: <input type="number" id="tableNO" name="tableNumber" min="1" max="15" style="height:30px;width:5;font-size:14pt;">
+					<h7>Bordsnummer*<h7><br>
+						<input type="number" id="tableNO" name="tableNumber" min="1" max="15">
 					</div>
 	<!--Send info button-->
 					<div id="sendB_div" class="extraD">
-						<button type="submit" id="send_button" onclick="sendinfo_press()" style="height:30px;width:10;font-size:14pt;">
-						<img src="http://images.clipartbro.com/4/green-tick-4984.png" width="20" height="20">
-						Send Info
+						<button type="submit" id="send_button" onclick="sendinfo_press()">
+						<img src="http://images.clipartbro.com/4/green-tick-4984.png" width="20" height="100%">
+						Send info
 						</button>
 						<div id="warningsign"></div>
 					</div>
@@ -87,7 +90,7 @@
 		<script>disp_food("Burg_div")</script>
 		<script>displayDrinks("dryck_div")</script>
 		<script>displayExtra_Alternative("addable_stuff")</script>
-
+		
 
 	<!-- end of body -->
 	</body>
