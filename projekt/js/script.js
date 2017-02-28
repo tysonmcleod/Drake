@@ -47,7 +47,7 @@ iindex=0;
 			else if(item==="drinks"){
 			var txt = document.createTextNode(drinks[index].drink_name);
 			}
-			pic_heading.appendChild(txt);
+			/*pic_heading.appendChild(txt);*/
 			document.getElementById(parent_id).appendChild(pic_heading);
 
 	}
