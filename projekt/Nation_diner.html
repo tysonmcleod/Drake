@@ -1,79 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
+	<!-- head -->
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	 	<script type="text/javascript" src="data/menu.js"></script>
 		<script src="js\script.js"></script>
 		<meta charset="utf-8"/>
-		<title>Nation Bar</title>
+		<title>majorkey</title>
 	</head>
+	<!-- end of head -->
+
+	<!-- body -->
 	<body id="body">
-		<nav>
-			<ul id="navBar">
-		  	<li><a class="active" href="#diner">Restaurang</a></li>
-		  	<li><a href="#kitchen">Köket</a></li> <!--Byt ut #kitchen mot länken till köket-->
-		  	<li><a href="#contact">Kontakta oss</a></li> <!--Byt ut #contact mot länken till kontakter-->
-		  	<li><a href="#about">Om oss</a></li> <!--Byt ut #about mot länken till about sidan-->
-			</ul>
-		</nav>
-		<div id="container">
-			<main id="head_div">
-			<h1>Välkommen till Nation Puben</h1>
-			</main>
 
-			<!--Burger section-->
-			<section class="foodNdrink">
+	<!-- container -->
+		<div class="container">
+	<!-- sidebar -->
+			<div id="left">
+				<nav>
+					<ul id="navBar">
+		  			<li><a href="kitchen.html">Köket</a></li> <!--Byt ut #kitchen mot länken till köket-->
+		  		</ul>
+	<!-- orders listed in side bar -->
 
-				<h2>Välj burgare</h2>
-					<div ID="Burg_div" class="scrollmenu">
-											</div>
-			</section>
-
-			<!--Beverage section-->
-			<section class ="foodNdrink">
-				<h2>Välj läsk/dryck</h2>
-					<div ID="dryck_div" class="scrollmenu">
-				</div>
-			</section>
-
-			<section ID="extrainfo">
-				<h2>Tillbehör</h2>
-
-
-
-                <div id="addable_stuff" class="scrollmenu">
-                </div>
-
-
-							<div id="testB">
-									<!--Text box reserved for extra info-->
-									<div ID="extrainfo_box" >
-											<h4>Extra information(allergier, egna önskemål mm).</h4>
-											<textarea id="txtBox" rows="5" cols="70" maxlength="207"></textarea>
-									</div>
-
-									<!--Table number selection box-->
-									<div id="tableNO_div" class="extraD">
-											Bordsnummer*: <input type="number" id="tableNO" name="tableNumber" min="1" max="15">
-									</div>
-
-									<!--Send info button-->
-									<div id="sendB_div" class="extraD">
-											<button type="submit" id="send_button" onclick="sendinfo_press()">
-													<img src="http://images.clipartbro.com/4/green-tick-4984.png" width="20" height="20">
-													Send Info
-											</button>
-											<div id="warningsign"></div>
-									</div>
-							</div>
-				</section>
-			<div ID="footer">
-				<hr>
-				Copyright &copy; 2017 Team Drake
+					<div id="order_listDiv">
+					<h3 id ="orderH3">Beställningar</h3>
+					<ul id="order_list">
+					</ul>
+					</div>
+					<h5>Obs: Dubbelklicka på objekt i listan för att ta bort dem</h5>
+				</nav>
 			</div>
+
+	<!-- food, extras and drinks -->
+			<div id="right">
+
+	<!-- food part of the right section -->
+				<div id="foodNdrink">
+					<h2> Välj burgare </h2>
+					<div id="Burg_div" class="scrollmenu"></div>
+				</div>
+	<!-- sauce part of the right section -->
+				<div id="sauce_div">
+					<h2> Tillbehör </h2>
+					<div id="addable_stuff" class="scrollmenu"></div>
+				</div>
+	<!-- drink part of the right section -->
+				<div id="drink">
+					<h2> Välj läsk/kaffe/dryck </h2>
+					<div id ="dryck_div" class = "scrollmenu"></div>
+				</div>
+	<!-- extras part of the right section -->
+				<h2>Ange informationen och skicka in beställningen</h2>
+				<div id="extrainfo">
+					<div id="testB">
+	<!--Text box reserved for extra info-->
+					<div ID="extrainfo_box" >
+						<h7>Extra information(allergier, egna önskemål mm).</h7>
+						<textarea id="txtBox" rows="5" cols="70" maxlength="207"></textarea>
+					</div>
+	<!--Table number selection box-->
+					<div id="tableNO_div" class="extraD">
+					Bordsnummer*: <input type="number" id="tableNO" name="tableNumber" min="1" max="15">
+					</div>
+	<!--Send info button-->
+					<div id="sendB_div" class="extraD">
+						<button type="submit" id="send_button" onclick="sendinfo_press()" style="height:30px;width:10;font-size:14pt;">
+						<img src="http://images.clipartbro.com/4/green-tick-4984.png" width="20" height="20">
+						Send Info
+						</button>
+						<div id="warningsign"></div>
+					</div>
+					</div>
+				</div>
+
+
+	<!-- end of the right section -->
+			</div>
+
+	<!-- end of container -->
 		</div>
-		 <script>disp_food("Burg_div")</script>
-		 <script>disp_drink("dryck_div")</script>
-		 <script>displayExtra_Alternative("addable_stuff")</script>
+
+	<!-- some javascript -->
+
+		<script>disp_food("Burg_div")</script>
+		<script>displayExtra_Alternative("addable_stuff")</script>
+
+	<!-- end of body -->
 	</body>
+
+
 </html>
