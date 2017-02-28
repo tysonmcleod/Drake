@@ -493,53 +493,42 @@ function sauce_or(){
 }
 /*method that handles the drink order*/
 function drink_or(){
-	var drink_order="";
-	for(var i=0;i<drinks.length;i++){
-		if(document.getElementById("checkB"+i).checked){
-			drink_order=drink_order+drinks[i].drink_name+", ";
-		}
-	}
-		if(drink_order.length!==0){
-
-			return " Extra sås: "+drink_order+"| ";
-		}
+	var drinks_order="";
+	var list = document.getElementById("order_list");
+	var list_items = list.getElementsByTagName("li");
+ 	for(var i=0;i<list_items.length;i++){
+		 if(list_items[i].textContent!="" && list_items[i].id.substring(0, 6)==="drinks"){
+			 drinks_order=drinks_order+list_items[i].textContent+", ";
+		 }
+	 }
+ 		if(drinks_order!=""){
+ 			return drinks_order+" | ";
+ 		}
 		else{
-			return"";
+			return "";
 		}
 }
 
-
 /*method that handles the food order*/
 function food_or(){
-	var drinks_order="";
 	var food_order="";
 	var sauce_order="";
 	 var list = document.getElementById("order_list");
 	 var list_items = list.getElementsByTagName("li");
 	for(var i=0;i<list_items.length;i++){
-		if(list_items[i].textContent!="" && (list_items[i].id.substring(0, 6))!="drinks" && (list_items[i].id.substring(0, 5))!=="sauce"){
+		if(list_items[i].textContent!="" && (list_items[i].id.substring(0,4))==="food"){
 			food_order=food_order+list_items[i].textContent+", ";
 		}
-		else if(list_items[i].id.substring(0, 6)==="drinks"){
-			drinks_order=drinks_order+list_items[i].textContent+", ";
-		}
-		else{
+		else if(list_items[i].id.substring(0,5)==="sauce"){
 			sauce_order=sauce_order+list_items[i].textContent+", ";
 		}
 	}
-
 	if(list_items.length!==0){
-		if(food_order!=""&&drinks_order!=""&&sauce_order!=""){
-			return food_order+" | "+sauce_order+" | "+drinks_order+" | ";
+		if(food_order!=""&&sauce_order!=""){
+			return food_order+" | "+sauce_order+" | ";
 		}
 		else if(food_order===""){
 			return"";
-		}
-		else if(drinks_order===""){
-			return food_order+" | "+sauce_order+" | ";
-		}
-		else{
-			return food_order+" | "+drinks_order+" | ";
 		}
 	}
 	else{
@@ -590,10 +579,10 @@ function ul(){
 		}
 
 			else{
-				console.log(food_or()+txtbox_info()+table_NO()+"||");
+				console.log(food_or()+drink_or()+txtbox_info()+table_NO()+"||");
 				refresh()
-				del_Element("order_list");
-				ul()
-				sent_order();
+				del_Element("order_list");//deletes the orders in the sidebar
+				ul()                      //Creates a new empty ul
+				sent_order();             //notifies the user that the order is sent
 			}
 		}
