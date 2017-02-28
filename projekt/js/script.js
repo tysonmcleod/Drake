@@ -543,15 +543,15 @@ function table_NO(){
 	/* "refresh" the page*/
 function refresh(){
 
-	for(var i=0;i<food.length;i++){
-		document.getElementById(food[i].food_name).value="";
-	}
-	for(var i=0;i<drinks.length;i++){
-		document.getElementById("checkB"+i).checked=false;
-	}
-	for(var i=0;i<sauce.length;i++){
-		document.getElementById("checkB"+i).checked=false;
-				}
+	// for(var i=0;i<food.length;i++){
+	// 	document.getElementById(food[i].food_name).value="";
+	// }
+	// for(var i=0;i<drinks.length;i++){
+	// 	document.getElementById("checkB"+i).checked=false;
+	// }
+	// for(var i=0;i<sauce.length;i++){
+	// 	document.getElementById("checkB"+i).checked=false;
+	// 			}
 
 	document.getElementById("txtBox").value="";
 	document.getElementById("tableNO").value="";
