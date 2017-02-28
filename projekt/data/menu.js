@@ -11,7 +11,7 @@ var food = [
 	"price": "85kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "https://max.se/ImageVaultFiles/id_2557/cf_15/580x325px_Spicy-Chicken_Creole-fiskburgare.jpg"
+	"img_link": "http://www.max.se/ImageVaultFiles/id_2650/cf_22/Burgers-Fishburger.jpg"
 	},
 	{
 	"food_name": "VEGGO",
