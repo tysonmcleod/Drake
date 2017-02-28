@@ -16,24 +16,20 @@ h2 {
     text-align: left;
 }
 
-/*nav{
-	width:285;
-	height:488;
-}*/
 nav #navBar {
     list-style-type: none;
-    /*margin: 0;
-    padding: 0;
-    width: 15%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 100%;
-    overflow: auto;*/
+    border: 1px solid black;
+    margin:0;
+    height: 5vh;
+    font-size: 1.5em;
+    padding-top: 10%;
+
 }
 li a {
     display: block;
     color: #000;
-    padding: 16px 32px;
+    margin-left: 0;
+    
     text-decoration: none;
 }
 li a.active {
@@ -54,7 +50,7 @@ li a:hover:not(.active) {
 #left{
 	
 	top: 0; bottom: 0; left: 0;
-	
+	height: 100vh;
 	position: absolute;
 	width: 15%;
 	
@@ -70,42 +66,6 @@ li a:hover:not(.active) {
 }
 
 
-}
-
-
-#extrainfo_box{
-	flex:3;
-	order:1;
-	height: 130px;
-}
-#tableNO_div{
-	flex:1;
-	order:2;
-	height: 125px;
-}
-#tableNO{
-	margin-top: 80px;
-}
-#send_button{
-	margin-top: 80px;
-}
-#sendB_div{
-flex:1;
-order:3;
-height: 125px;
-}
-#testB{
-	display: flex;
-	height: 250px;
-}
-button:hover{
-    background-color:white;
-		text-align:center;
-}
-textarea{
-	border:Ridge;
-	border-color:#232b2b;
-}
 div.scrollmenu {
 
   overflow-x: auto;
@@ -152,20 +112,82 @@ th.cells{
 
 }
 
-/*
+
 #foodNdrink{
-	height: 33%;
+	height: 30vh;
 }
 
 #sauce_div{
-	height: 25%;
+	height: 20vh;
 }
 
 #drink{
-	height: 25%;
+	height: 20vh;
 }
 
 #extrainfo{
-	
+	height: 30vh;
+	top:0;
+	bottom: 0;
+	border:1px solid pink;
 }
-*/
+
+
+
+#testB{
+	display: flex;
+	height: 100%;
+}
+
+/******************/
+
+#extrainfo_box{
+	flex:3;
+	order:1;
+	height: 100%;
+	bottom: 0;
+	top: 0;
+	border: 1px solid black;
+
+}
+
+textarea{
+	height: 80px;
+	border:Ridge;
+	border-color:pink;
+}
+/********************/
+
+
+#tableNO_div{
+	flex:1;
+	order:2;
+	border: 1px solid black;
+	height: 100%;
+	bottom: 0;
+
+}
+#tableNO{
+	border: 3px solid pink;
+	
+	height: 86px;
+}
+
+/*************/
+
+#send_button{
+	border: 1px solid black;
+	bottom: 0;
+	top:0;
+	height: 114px;
+}
+#sendB_div{
+flex:1;
+order:3;
+
+}
+
+button:hover{
+    background-color:pink;
+		text-align:center;
+}
