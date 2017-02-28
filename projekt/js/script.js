@@ -434,17 +434,18 @@ iindex=0;
 	}
 		//ul_list("list_test"+index,ol_list,index);
 		//del_button(parent_id)
-		L_order.ondblclick=function(){
-			if(type=="sauce"){
-				del_Element("sauce"+index);
-			}
-			else if(type=="drinks"){
-				del_Element("drinks"+index);
-			}
-			else if(type=="food"){
-				del_Element("food"+index);
-			}
-}
+		// L_order.ondblclick=function(){
+		// 	if(type=="sauce"){
+		// 		del_Element("sauce"+index);
+		// 	}
+		// 	else if(type=="drinks"){
+		// 		del_Element("drinks"+index);
+		// 	}
+		// 	else if(type=="food"){
+		// 		console.log(index);
+		// 		del_Element("food"+index);
+		// 	}
+		// }
 	}
 	function ul_list(parent_id,list,index){
 		var Button_area = document.createElement("DIV");
@@ -576,4 +577,3 @@ function ul(){
 				sent_order();
 			}
 		}
-	
