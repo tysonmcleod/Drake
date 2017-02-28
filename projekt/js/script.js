@@ -33,19 +33,20 @@ iindex=0;
 		th.setAttribute("id",my_id);
 		th.setAttribute("class","cells");
 		document.getElementById(parent_id).appendChild(th);
+
 	}
 	/*img heading*/
 	function img_heading(parent_id,index,item){
-			var pic_heading = document.createElement("H4");
+			var pic_heading = document.createElement("H5");
 			if(item==="food"){
 			var txt = document.createTextNode(food[index].food_name);
 			}
 			else if(item==="sauce"){
 			var txt = document.createTextNode(sauce[index].sauce_name);
 			}
-			// else if(item==="drink"){
-			// var txt = document.createTextNode(drink[index].drink_name);
-			// }
+			else if(item==="drinks"){
+			var txt = document.createTextNode(drinks[index].drink_name);
+			}
 			pic_heading.appendChild(txt);
 			document.getElementById(parent_id).appendChild(pic_heading);
 
@@ -58,6 +59,8 @@ iindex=0;
 		}
 		else if(item==="sauce"){
 			img.setAttribute("src",sauce[index].img_link);
+		}else if(item==="drinks"){
+			img.setAttribute("src",drinks[index].img_link);
 		}
 
 		img.style.height = img_size;
@@ -76,6 +79,8 @@ iindex=0;
 		img.onclick=function(){
 			if(type=="sauce"){
 				orderNav_bar(sauce[index].sauce_name,index,"sauce");
+		}	else if(type=="drinks"){
+				orderNav_bar(drinks[index].drink_name,index,"drinks");
 		}
 			else if(type=="food"){
 				food_check(parent_id,index);
@@ -345,19 +350,44 @@ iindex=0;
 			cells(parent_id,i,"mySauce"+i);
 			 /*Makes the last cell have the same distance from the right wall as the first one have from the left*/
 			 if(i==(sauce.length-1)){
-				 document.getElementById("mySauce"+i).style.paddingRight="100px";
+				 document.getElementById("mySauce"+i).style.paddingRight="30px";
 			 }
  			/*pic heading*/
 			img_heading("mySauce"+i,i,"sauce");
 
  			/*pictures */
-			img("mySauce"+i,i,"sauce","3em","sauce");
+			img("mySauce"+i,i,"sauce","5em","sauce");
 
 			/*necessary space under the img*/
 				var h = document.createElement("P");
 				var t = document.createTextNode("                ");
 				h.appendChild(t);
 				document.getElementById("mySauce"+i).appendChild(h);
+
+			/*ordering of food*/
+			//checkboX("mySauce"+i,i);
+		}
+  }
+    /*method that displays drinks*/
+	function displayDrinks(parent_id) {
+ 		for(var i=0;i<drinks.length;i++){
+ 			/*Cells in table*/
+			cells(parent_id,i,"myDrinks"+i);
+			 /*Makes the last cell have the same distance from the right wall as the first one have from the left*/
+			 if(i==(drinks.length-1)){
+				 document.getElementById("myDrinks"+i).style.paddingRight="30px";
+			 }
+ 			/*pic heading*/
+			img_heading("myDrinks"+i,i,"drinks");
+
+ 			/*pictures */
+			img("myDrinks"+i,i,"drinks","5em","drinks");
+
+			/*necessary space under the img*/
+				var h = document.createElement("P");
+				var t = document.createTextNode("                ");
+				h.appendChild(t);
+				document.getElementById("myDrinks"+i).appendChild(h);
 
 			/*ordering of food*/
 			//checkboX("mySauce"+i,i);
@@ -404,15 +434,17 @@ iindex=0;
 	}
 		//ul_list("list_test"+index,ol_list,index);
 		//del_button(parent_id)
-		// L_order.ondblclick=function(){
-		// 	if(type=="sauce"){
-		// 		del_Element("sauce"+index);
-		// 	}
-		// 	else if(type=="food"){
-		// 		console.log(type+iindex;)
-		// 		del_Element("food"+);//////Fixa///////
-		// 	}
-		// }
+		L_order.ondblclick=function(){
+			if(type=="sauce"){
+				del_Element("sauce"+index);
+			}
+			else if(type=="drinks"){
+				del_Element("drinks"+index);
+			}
+			else if(type=="food"){
+				del_Element("food"+index);
+			}
+}
 	}
 	function ul_list(parent_id,list,index){
 		var Button_area = document.createElement("DIV");
@@ -458,6 +490,23 @@ function sauce_or(){
 			return"";
 		}
 }
+/*method that handles the drink order*/
+function drink_or(){
+	var drink_order="";
+	for(var i=0;i<drinks.length;i++){
+		if(document.getElementById("checkB"+i).checked){
+			drink_order=drink_order+drinks[i].drink_name+", ";
+		}
+	}
+		if(drink_order.length!==0){
+
+			return " Extra sås: "+drink_order+"| ";
+		}
+		else{
+			return"";
+		}
+}
+
 
 /*method that handles the food order*/
 function food_or(){
@@ -492,6 +541,17 @@ function table_NO(){
 }
 	/* "refresh" the page*/
 function refresh(){
+
+	for(var i=0;i<food.length;i++){
+		document.getElementById(food[i].food_name).value="";
+	}
+	for(var i=0;i<drinks.length;i++){
+		document.getElementById("checkB"+i).checked=false;
+	}
+	for(var i=0;i<sauce.length;i++){
+		document.getElementById("checkB"+i).checked=false;
+				}
+
 	document.getElementById("txtBox").value="";
 	document.getElementById("tableNO").value="";
 }
@@ -516,3 +576,6 @@ function ul(){
 				sent_order();
 			}
 		}
+	}
+
+

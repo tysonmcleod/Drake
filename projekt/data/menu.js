@@ -1,27 +1,27 @@
 var food = [
 	{
-	"food_name": "Hamburgare",
+	"food_name": "OST",
 	"price": "90kr",
 	"lactose": true,
 	"gluten": true,
 	"img_link": "http://www.seriouseats.com/recipes/assets_c/2015/07/20150727-teriyaki-burger-recipe-15-thumb-1500xauto-425274.jpg"
 	},
 	{
-	"food_name": "Fiskburgare",
+	"food_name": "FISK",
 	"price": "85kr",
 	"lactose": true,
 	"gluten": true,
 	"img_link": "http://www.max.se/ImageVaultFiles/id_2650/cf_22/Burgers-Fishburger.jpg"
 	},
 	{
-	"food_name": "Veggoburgare",
+	"food_name": "VEGGO",
 	"price": "80kr",
 	"lactose": true,
 	"gluten": false,
 	"img_link": "http://lisaoerikshalsoblogg.ellematovin.se/wp-content/uploads/sites/17/2016/02/Veggie-Burger.jpg"
 	},
 	{
-	"food_name": "Halloumiburgare",
+	"food_name": "BACON",
 	"price": "95kr",
 	"lactose": true,
 	"gluten": true,
@@ -44,6 +44,35 @@ var food = [
 	{
 	"food_name": "Test C",
 	"price": "80kr",
+	"lactose": true,
+	"gluten": true,
+	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
+	{
+	"food_name": "Test D",
+	"price": "95kr",
+	"lactose": true,
+	"gluten": true,
+	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
+	{
+	"food_name": "Test D",
+	"price": "95kr",
+	"lactose": true,
+	"gluten": true,
+	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
+	{
+	"food_name": "Test D",
+	"price": "95kr",
+	"lactose": true,
+	"gluten": true,
+	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	}
+	,
+	{
+	"food_name": "Test D",
+	"price": "95kr",
 	"lactose": true,
 	"gluten": true,
 	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
@@ -94,36 +123,82 @@ var sauce = [
 		"sauce_name": "Test sås C",
 		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
 	},
+	{
+		"sauce_name": "Test sås C",
+		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
+	{
+		"sauce_name": "Test sås C",
+		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
+	{
+		"sauce_name": "Test sås C",
+		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
+	{
+		"sauce_name": "Test sås C",
+		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
+	{
+		"sauce_name": "Test sås C",
+		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	},
 ];
-var drink = [
+
+
+var drinks = [
 	{
-		"drink_name":"Kalla drycker",
-		"img_link":"http://captainquizz.s3.amazonaws.com/quizz/54b5010016eba4.23916311.jpg",
-		"drink0":"Inget",
-		"drink1": "Cola",
-		"drink2": "Fanta",
-		"drink3": "Sprite",
-		"drink4": "Zingo",
-		"drink5": "Trocadero"
+		"drink_name": "Kaffe med m",
+		"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
 	},
 	{
-		"drink_name":"Varma drycker",
-		"img_link":"http://kaffe.handla-online.org/gevalia-kaffe.jpg",
-		"drink0":"Inget",
-		"drink1": "Svart kaffe",
-		"drink2": "Cappuccino",
-		"drink3": "Café au lait",
-		"drink4": "Café au Chocolat",
-		"drink5": "Varm choklad"
+		"drink_name": "Kaffe",
+		"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
 	},
 	{
-		"drink_name":"Öl drycker",
-		"img_link":"http://captainquizz.s3.amazonaws.com/quizz/54b5010016eba4.23916311.jpg",
-		"drink0":"Inget",
-		"C_drink1": "Öl A",
-		"C_drink2": "Öl B",
-		"C_drink3": "Öl C",
-		"C_drink4": "Öl D",
-		"C_drink5": "Öl E"
+		"drink_name": "Läsk",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
 	},
-]
+	{
+		"drink_name": "Läsk2",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
+	},
+	{
+		"drink_name": "beer1",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
+	},
+	{
+		"drink_name": "beer2",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
+},
+	{
+		"drink_name": "beer3",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
+},
+	{
+		"drink_name": "beer4",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
+	},
+	{
+		"drink_name": "beer5",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
+},{
+		"drink_name": "beer5",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
+},{
+		"drink_name": "beer5",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
+},{
+		"drink_name": "beer5",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
+},{
+		"drink_name": "beer5",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
+},{
+		"drink_name": "beer5",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
+},{
+		"drink_name": "beer5",
+"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
+},
+];
