@@ -48,7 +48,7 @@ iindex=0;
 			var txt = document.createTextNode(drinks[index].drink_name);
 			}
 			/*pic_heading.appendChild(txt);*/
-			document.getElementById(parent_id).appendChild(pic_heading);
+			/*document.getElementById(parent_id).appendChild(pic_heading);*/
 
 	}
 	function img(parent_id,index,item,img_size,type){
@@ -491,22 +491,7 @@ function sauce_or(){
 			return"";
 		}
 }
-/*method that handles the drink order*/
-function drink_or(){
-	var drink_order="";
-	for(var i=0;i<drinks.length;i++){
-		if(document.getElementById("checkB"+i).checked){
-			drink_order=drink_order+drinks[i].drink_name+", ";
-		}
-	}
-		if(drink_order.length!==0){
 
-			return " Extra sås: "+drink_order+"| ";
-		}
-		else{
-			return"";
-		}
-}
 
 
 /*method that handles the food order*/
