@@ -97,32 +97,17 @@ padding-bottom: 3%;
 	text-align: left;
 	overflow: auto;
 }
-.cells{
-	/*display: inline-block;*/
-	/*display: table-cell;*/
-	/*float: left;*/
-	/*display: block;*/
-	/*table-layout: fixed;*/
-	
-}
-
-
-th.cells{
-	width: 150px;
-
-}
-
 
 #foodNdrink{
-	height: 30vh;
+	height: 25%;
 }
 
 #sauce_div{
-	height: 20vh;
+	height: 20%;
 }
 
 #drink{
-	height: 20vh;
+	height: 20%;
 }
 
 #extrainfo{
@@ -190,4 +175,8 @@ order:3;
 button:hover{
     background-color:pink;
 		text-align:center;
+}
+
+#warningsign{
+	margin-top:0;
 }
