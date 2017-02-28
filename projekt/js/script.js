@@ -64,7 +64,7 @@ iindex=0;
 		}
 
 		img.style.height = img_size;
-		img.style.width = img_size;
+		img.style.width = "7em";
 		img.style.border = "white Ridge";
 		img.style.borderRadius="1em";
 		document.getElementById(parent_id).appendChild(img);
