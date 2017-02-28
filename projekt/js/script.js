@@ -496,16 +496,36 @@ function sauce_or(){
 
 /*method that handles the food order*/
 function food_or(){
+	var drinks_order="";
 	var food_order="";
+	var sauce_order="";
 	 var list = document.getElementById("order_list");
 	 var list_items = list.getElementsByTagName("li");
 	for(var i=0;i<list_items.length;i++){
-		if(list_items[i].textContent!=""){
+		if(list_items[i].textContent!="" && (list_items[i].id.substring(0, 6))!="drinks" && (list_items[i].id.substring(0, 5))!=="sauce"){
 			food_order=food_order+list_items[i].textContent+", ";
 		}
+		else if(list_items[i].id.substring(0, 6)==="drinks"){
+			drinks_order=drinks_order+list_items[i].textContent+", ";
+		}
+		else{
+			sauce_order=sauce_order+list_items[i].textContent+", ";
+		}
 	}
+
 	if(list_items.length!==0){
-		return food_order+" | ";
+		if(food_order!=""&&drinks_order!=""&&sauce_order!=""){
+			return food_order+" | "+sauce_order+" | "+drinks_order+" | ";
+		}
+		else if(food_order===""){
+			return"";
+		}
+		else if(drinks_order===""){
+			return food_order+" | "+sauce_order+" | ";
+		}
+		else{
+			return food_order+" | "+drinks_order+" | ";
+		}
 	}
 	else{
 		return"";
