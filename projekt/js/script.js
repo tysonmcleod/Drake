@@ -567,7 +567,7 @@ function refresh(){
 	document.getElementById("tableNO").value="";
 }
 function ul(){
-	var ul = document.kitchen.html;
+	var ul = document.createElement("UL");
 	ul.setAttribute("id","order_list");
 	document.getElementById('order_listDiv').appendChild(ul);
 }
@@ -580,25 +580,10 @@ function ul(){
 		}
 
 			else{
-				/*console.log(food_or()+drink_or()+txtbox_info()+table_NO()+"||");*/
-                
-                var data = new Array();
-                data[0] = food_or();
-                data[1] = drink_or();
-                data[2]=txtbox_info();
-                data[3] = table_NO();
-                
-                var packed = "";
-  for (i = 0; (i < data.length); i++) {
-    if (i > 0) {
-      packed += ",";
-    }
-    packed += escape(data[i]);
-  }
-  window.location = "kitchen.html?" + packed;
-				/*refresh()*/
+				console.log(food_or()+drink_or()+txtbox_info()+table_NO()+"||");
+				refresh()
 				del_Element("order_list");//deletes the orders in the sidebar
-				/*ul()*/                      //Creates a new empty ul
+				ul()                      //Creates a new empty ul
 				sent_order();             //notifies the user that the order is sent
 			}
 		}
