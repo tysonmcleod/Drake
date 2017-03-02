@@ -525,10 +525,10 @@ function food_or(){
 		}
 	}
 	if(list_items.length!==0){
-		if(food_order!=""&&sauce_order!=""){
+		if(food_order!="" && sauce_order!=""){
 			return food_order+" | "+sauce_order+" | ";
 		}
-		else if(food_order===""){
+		else if(food_order==="" && sauce_order!=""){
 			return"";
 		}
 	}
