@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<!-- head -->
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	 	<script type="text/javascript" src="data/menu.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js\script.js"></script>
+		<!--script src="vue/vue.js"></script-->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>majorkey</title>
+	</head>
+	<!-- end of head -->
+
+	<!-- body -->
+	<body id="body">
+
+	<!-- container -->
+		<div id="container">
+	<!-- sidebar -->
+			<div id="left">
+				<nav>
+					<ul id="navBar">
+		  			<li><a href="kitchen">Köket</a></li> <!--Byt ut #kitchen mot länken till köket-->
+		  		</ul>
+	<!-- orders listed in side bar -->
+
+					<div id="order_listDiv">
+					<h3 id ="orderH3">Beställningar</h3>
+					<ul id="order_list">
+					</ul>
+					</div>
+
+					<h5>Obs: Dubbelklicka på objekt i listan för att ta bort dem</h5>
+				</nav>
+			</div>
+
+	<!-- food, extras and drinks -->
+			<div id="right">
+
+	<!-- food part of the right section -->
+				<div id="foodNdrink">
+					<h2> Välj burgare </h2>
+					<div id="Burg_div" class="scrollmenu"></div>
+				</div>
+	<!-- sauce part of the right section -->
+				<div id="sauce_div">
+					<h2> Tillbehör </h2>
+					<div id="addable_stuff" class="scrollmenu"></div>
+				</div>
+	<!-- drink part of the right section -->
+				<div id="drink">
+					<h2> Välj läsk/kaffe/dryck </h2>
+					<div id ="dryck_div" class = "scrollmenu"></div>
+				</div>
+	<!-- extras part of the right section -->
+
+				<div id="extrainfo">
+					<h2>Ange informationen och skicka in beställningen</h2>
+					<div id="testB">
+	<!--Text box reserved for extra info-->
+					<div ID="extrainfo_box" >
+						<h5>Extra information(allergier, egna önskemål mm).</h5>
+						<textarea id="txtBox" rows="5" cols="70" maxlength="207"></textarea>
+					</div>
+	<!--Table number selection box-->
+					<div id="tableNO_div" class="extraD">
+					<h5>Bordsnummer*<h5><br>
+						<input type="number" id="tableNO" name="tableNumber" min="1" max="15">
+					</div>
+
+					<!--Send info button-->
+									<div id="sendB_div" class="extraD">
+										<button onclick="sendinfo_press()" id="send_button">
+										<img src="http://images.clipartbro.com/4/green-tick-4984.png" width="50" height="100%">
+										Send info
+										</button>
+										<div id="warningsign"></div>
+									</div>
+
+					</div>
+				</div>
+
+
+	<!-- end of the right section -->
+			</div>
+
+	<!-- end of container -->
+		</div>
+
+	<!-- some javascript -->
+
+		<script>disp_food("Burg_div")</script>
+		<script>displayDrinks("dryck_div")</script>
+		<script>displayExtra_Alternative("addable_stuff")</script>
+
+
+	<!-- end of body -->
+	</body>
+
+				  <!--script src="js/nationPub.js"></script>
+				  <script src="js\diner.js"></script-->
+
+</html>

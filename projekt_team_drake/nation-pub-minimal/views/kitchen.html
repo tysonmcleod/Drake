@@ -1,0 +1,63 @@
+<DOCTYPE html>
+<html lang="en">
+
+	<!-- head -->
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/kitchenstyle.css">
+	 	<script type="text/javascript" src="data/menu.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="js\script.js"></script>
+		<meta charset="utf-8"/>
+		<title>kitchen</title>
+	</head>
+	<!-- end of head -->
+
+	<!-- body -->
+	<body id="body">
+
+	<!-- container -->
+		<div class="container">
+	<!-- top of page -->
+			<div id="top">
+				<div id="lefty"><li id="navBar"><a href="">Food</a></li> </div>
+				<div id="orders">Orders </div>
+				<div id="done">Done </div>
+			</div>
+	<!-- new orders -->
+		<div id="K_orders">
+			<div id="neworders">
+				<div id="newOrderBox">
+					    <h1>Väntande beställningar</h1>
+						<ol>
+						  <li v-for="(item, key) in orders" v-if="!item.done">
+							{{ key }} : {{ item.orderItems }}
+							<button v-on:click="markDone(key)">
+							  Klart
+							</button>
+						  </li>
+						</ol>
+				</div>
+			</div>
+
+	<!-- completed orders -->
+			<div id="completedorders">
+				<div id="completedOrderBox">
+					   <h1>Färdiga beställningar</h1>
+						<ol>
+						  <li v-for="(item, key) in orders" v-if="item.done">
+							{{ key }} : {{ item.orderItems }}
+						  </li>
+						</ol>
+	<!-- end of the right section -->
+			</div>
+		</div>
+	<!-- end of container -->
+		</div>
+
+	<!-- end of body -->
+	</body>
+  <script src="/vue/vue.js"></script>
+  <script src="js/nationPub.js"></script>
+  <script src="js/kitchen.js"></script>
+
+</html>
