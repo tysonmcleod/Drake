@@ -529,15 +529,15 @@ function food_or(){
 	}
 	if(list_items.length!==0){
 		if(food_order!=""&&sauce_order!=""){
-			return food_order+" | "+sauce_order+" | ";
+			return food_order+" | "+sauce_order+" | "+table_NO()+"||";
 		}
-		else if(food_order===""){
-			return"";
+		else if(food_order!==""){
+			return food_order+table_NO()+"||";
 		}
 	}
-	else{
-		return"";
-	}
+	// else{
+	// 	return"";
+	// }
 }
 
 /*method that handles the extra info box*/
@@ -583,7 +583,6 @@ function ul(){
 
 /*method that handles "send info" button click */
 	function sendinfo_press(){
-		console.log("button clicked");
 		if(document.getElementById("tableNO").value==""|| document.getElementById("tableNO").value<1||
 			 document.getElementById("tableNO").value>15|| food_or()==""){
 				 disp_warningMsg();
@@ -594,11 +593,11 @@ function ul(){
 				//listCreate("newOrderList",food_or());
 				var a = [];
 
-				socket.emit('order', {orderId: "#1234", orderItems:[food_or()]});
+				socket.emit('order', {orderId: "#1234", orderItems:food_or()});
 				refresh()
 				del_Element("order_list");//deletes the orders in the sidebar
 				ul()                      //Creates a new empty ul
-				sent_order();             //notifies the user that the order is sent
+				sent_order();             //notifies the user that the order has been sent
 			}
 		}
 //console.log(document.getElementById("newOrderList"));

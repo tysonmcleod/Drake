@@ -154,8 +154,9 @@ textarea{
 }
 #tableNO{
 	border: 3px solid pink;
-
-	height: 86px;
+	font-size: 50px;
+	/*height: 86px;*/
+	width: 70px;
 }
 
 /*************/
