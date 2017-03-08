@@ -535,9 +535,9 @@ function food_or(){
 			return food_order+table_NO()+"||";
 		}
 	}
-	// else{
-	// 	return"";
-	// }
+	else{
+		return"";
+	}
 }
 
 /*method that handles the extra info box*/
