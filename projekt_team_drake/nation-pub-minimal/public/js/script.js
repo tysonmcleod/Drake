@@ -529,14 +529,15 @@ function food_or(){
 	}
 	if(list_items.length!==0){
 		if(food_order!=""&&sauce_order!=""){
-			return food_order+" | "+sauce_order+" | "+table_NO()+"||";
+			return food_order+" | "+sauce_order+" | ";
 		}
 		else if(food_order!==""){
-			return food_order+table_NO()+"||";
+			return food_order+" | ";
 		}
-	}
-	else{
-		return"";
+
+		else if(food_order==""){
+			return"";
+		}
 	}
 }
 
@@ -580,7 +581,7 @@ function ul(){
 	ul.setAttribute("id","order_list");
 	document.getElementById('order_listDiv').appendChild(ul);
 }
-
+var testindex=1000;
 /*method that handles "send info" button click */
 	function sendinfo_press(){
 		if(document.getElementById("tableNO").value==""|| document.getElementById("tableNO").value<1||
@@ -590,14 +591,13 @@ function ul(){
 
 			else{
 				console.log(food_or()+drink_or()+txtbox_info()+table_NO()+"||");
-				//listCreate("newOrderList",food_or());
-				var a = [];
-
-				socket.emit('order', {orderId: "#1234", orderItems:food_or()});
-				refresh()
-				del_Element("order_list");//deletes the orders in the sidebar
-				ul()                      //Creates a new empty ul
-				sent_order();             //notifies the user that the order has been sent
+				var infoToKitchen = food_or()+table_NO()+"||";
+				socket.emit('order', {orderId: "#"+testindex, orderItems:infoToKitchen});
+				//refresh()
+				//del_Element("order_list");//deletes the orders in the sidebar
+				//ul()                      //Creates a new empty ul
+				//sent_order();             //notifies the user that the order has been sent
+				testindex++;
 			}
 		}
 //console.log(document.getElementById("newOrderList"));
