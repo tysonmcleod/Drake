@@ -4,201 +4,185 @@ var food = [
 	"price": "90kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "http://www.seriouseats.com/recipes/assets_c/2015/07/20150727-teriyaki-burger-recipe-15-thumb-1500xauto-425274.jpg"
+	"img_link": "https://s-media-cache-ak0.pinimg.com/564x/94/5e/ff/945eff5d3d6092bd7b60033362bd2344.jpg"
 	},
 	{
 	"food_name": "FISK",
 	"price": "85kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "http://www.max.se/ImageVaultFiles/id_2650/cf_22/Burgers-Fishburger.jpg"
+	"img_link": "http://img.taste.com.au/v08ayf5Y/w720-h480-cfill-q80/taste/2016/11/fish-burgers-1004-1.jpeg"
 	},
 	{
 	"food_name": "VEGGO",
 	"price": "80kr",
 	"lactose": true,
 	"gluten": false,
-	"img_link": "http://lisaoerikshalsoblogg.ellematovin.se/wp-content/uploads/sites/17/2016/02/Veggie-Burger.jpg"
+	"img_link": "http://assets.bonappetit.com/photos/57acae2d1b33404414975121/16:9/w_1200,c_limit/ultimate-veggie-burger.jpg"
 	},
 	{
 	"food_name": "BACON",
 	"price": "95kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "https://img.koket.se/sociallarge/varldens-basta-burgare-2.jpg"
+	"img_link": "http://www.mapleleaffarms.com/lib/sitefiles/Image/recipe/duck-bacon-burger.jpg"
 	},
-		{
-	"food_name": "Test A",
+	{
+	"food_name": "TEST",
 	"price": "90kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	"img_link": "http://smokeybones.com/wp-content/uploads/2015/11/loaded-bbq-burger.jpg"
 	},
 	{
-	"food_name": "Test B",
+	"food_name": "TESTA",
 	"price": "85kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	"img_link": "https://media.timeout.com/images/102945700/image.jpg"
 	},
 	{
-	"food_name": "Test C",
+	"food_name": "TESTB",
 	"price": "80kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	"img_link": "https://media.timeout.com/images/102945700/image.jpg"
 	},
 	{
-	"food_name": "Test D",
+	"food_name": "TEST",
 	"price": "95kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	"img_link": "http://1vipjq3ciavf8qqf2282mpj1.wpengine.netdna-cdn.com/wp-content/uploads/sites/31/2014/02/9.jpg"
 	},
 	{
-	"food_name": "Test D",
+	"food_name": "TEST",
 	"price": "95kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	"img_link": "http://1vipjq3ciavf8qqf2282mpj1.wpengine.netdna-cdn.com/wp-content/uploads/sites/31/2014/02/9.jpg"
 	},
 	{
-	"food_name": "Test D",
+	"food_name": "TEST",
 	"price": "95kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
-	}
-	,
-	{
-	"food_name": "Test D",
-	"price": "95kr",
-	"lactose": true,
-	"gluten": true,
-	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+	"img_link": "http://1vipjq3ciavf8qqf2282mpj1.wpengine.netdna-cdn.com/wp-content/uploads/sites/31/2014/02/9.jpg"
 	},
 	{
-	"food_name": "Test D",
+	"food_name": "TEST",
 	"price": "95kr",
 	"lactose": true,
 	"gluten": true,
-	"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
-	}
-];
+	"img_link": "http://1vipjq3ciavf8qqf2282mpj1.wpengine.netdna-cdn.com/wp-content/uploads/sites/31/2014/02/9.jpg"
+	},
+	{
+	"food_name": "TEST",
+	"price": "95kr",
+	"lactose": true,
+	"gluten": true,
+	"img_link": "http://1vipjq3ciavf8qqf2282mpj1.wpengine.netdna-cdn.com/wp-content/uploads/sites/31/2014/02/9.jpg"
+	},
+	];
 
 var sauce = [
 	{
-		"sauce_name": "Vitlökssås",
-		"img_link": "http://media.matdelikat.se/2014/03/DSC_3689.jpg"
+		"sauce_name": "VITLÖK_S",
+		"img_link": "http://i.ebayimg.com/00/s/NjAwWDYwMA==/z/8OAAAOSwV0RXvZV0/$_57.JPG?set_id=8800005007"
 	},
 	{
-		"sauce_name": "Kebabsås",
-		"img_link": "http://www.jennysmatblogg.nu/wp-content/uploads/img_6796-1.jpg"
+		"sauce_name": "RHODE_S",
+		"img_link": "https://www.skanaffaer.de/images/product_images/popup_images/felix_rhode_islanddressing_800px.jpg"
 	},
 	{
-		"sauce_name": "Stark sås",
-		"img_link": "https://res.cloudinary.com/hufennija/image/upload/f_auto,q_50,fl_progressive,w_1200,h_630,c_fill/22831076.jpg"
+		"sauce_name": "STARK_S",
+		"img_link": "http://i.huffpost.com/gadgets/slideshows/249982/slide_249982_1506131_free.jpg"
 	},
 	{
-		"sauce_name": "Mild sås",
-		"img_link": "http://www.matskafferiet.se/wp-content/uploads/2011/11/kebabs%C3%A5s.jpg"
+		"sauce_name": "MILD_S",
+		"img_link": "http://bpc.h-cdn.co/assets/15/51/480x480/gallery-1450191398-huy-fong-sriracha.jpg"
 	},
 	{
-		"sauce_name": "BBQ sås",
-		"img_link": "https://www.zeta.nu/wp-content/uploads/2017/01/bbqsas_li-1024x767.jpg"
+		"sauce_name": "BBQ_S",
+		"img_link": "https://img.tesco.com/Groceries/pi/878/0000050457878/IDShot_540x540.jpg"
 	},
 	{
-		"sauce_name": "Bönbearnaise",
-		"img_link": "https://www.zeta.nu/wp-content/uploads/2016/05/Bonbearnaise-1024x683.jpg"
+		"sauce_name": "CURRY_S",
+		"img_link": "http://groceries.iceland.co.uk/medias/sys_master/root/hb1/heb/8836724850718.jpg"
 	},
 	{
-		"sauce_name": "Test sås A",
-		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+		"sauce_name": "KETCHUP",
+		"img_link": "http://i.telegraph.co.uk/multimedia/archive/03416/o-HEINZ-KETCHUP-fa_3416679b.jpg"
 	},
 	{
-		"sauce_name": "Test sås B",
-		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+		"sauce_name": "SAUCE_S",
+		"img_link": "https://img.tesco.com/Groceries/pi/007/5000111001007/IDShot_540x540.jpg"
 	},
 	{
-		"sauce_name": "Test sås C",
-		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+		"sauce_name": "SAUCE_S",
+		"img_link": "https://img.tesco.com/Groceries/pi/007/5000111001007/IDShot_540x540.jpg"
 	},
 	{
-		"sauce_name": "Test sås C",
-		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
-	},
+		"sauce_name": "SAUCE_S",
+		"img_link": "https://img.tesco.com/Groceries/pi/007/5000111001007/IDShot_540x540.jpg"	},
 	{
-		"sauce_name": "Test sås C",
-		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
-	},
+		"sauce_name": "SAUCE_S",
+		"img_link": "https://img.tesco.com/Groceries/pi/007/5000111001007/IDShot_540x540.jpg"	},
 	{
-		"sauce_name": "Test sås C",
-		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
-	},
+		"sauce_name": "SAUCE_S",
+		"img_link": "https://img.tesco.com/Groceries/pi/007/5000111001007/IDShot_540x540.jpg"	},
 	{
-		"sauce_name": "Test sås C",
-		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
-	},
+		"sauce_name": "SAUCE_S",
+		"img_link": "https://img.tesco.com/Groceries/pi/007/5000111001007/IDShot_540x540.jpg"	},
 	{
-		"sauce_name": "Test sås C",
-		"img_link": "http://wp.patheos.com.s3.amazonaws.com/blogs/faithwalkers/files/2013/03/bigstock-Test-word-on-white-keyboard-27134336.jpg"
+		"sauce_name": "DELUXE_S",
+		"img_link": "http://cdn.shopify.com/s/files/1/0094/9462/products/Make-Sauce-Great-Again-Web_grande.jpg?v=1471455817"
 	},
 ];
 
 
 var drinks = [
 	{
-		"drink_name": "Kaffe med m",
-		"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
+		"drink_name": "KAFFE",
+		"img_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/275px-A_small_cup_of_coffee.JPG"
 	},
 	{
-		"drink_name": "Kaffe",
-		"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
+		"drink_name": "KAFFE_M",
+		"img_link": "https://thelviv.files.wordpress.com/2012/01/dscn5696.jpg"
 	},
 	{
-		"drink_name": "Läsk",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
+		"drink_name": "COLA",
+		"img_link": "https://daily.jstor.org/wp-content/uploads/2015/04/Coke_Branding_1050x700-1050x700.jpg"
 	},
 	{
-		"drink_name": "Läsk2",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
+		"drink_name": "FANTA",
+		"img_link": "https://www.makro.co.za/Images/Products/Large/MIN_234585_CSA.jpg?v=20160307"
 	},
 	{
-		"drink_name": "beer1",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
-	},
+		"drink_name": "ÖL_NMR1",
+		"img_link": "http://1pjlcu210mzdvv6zr350wqxp.wpengine.netdna-cdn.com/wp-content/uploads/2016/01/alcohol-beer.jpg"	},
 	{
-		"drink_name": "beer2",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
-},
+		"drink_name": "ÖL_NMR2",
+		"img_link": "http://1pjlcu210mzdvv6zr350wqxp.wpengine.netdna-cdn.com/wp-content/uploads/2016/01/alcohol-beer.jpg"},
 	{
-		"drink_name": "beer3",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
-},
+		"drink_name": "ÖL_NMR3",
+		"img_link": "http://1pjlcu210mzdvv6zr350wqxp.wpengine.netdna-cdn.com/wp-content/uploads/2016/01/alcohol-beer.jpg"},
 	{
-		"drink_name": "beer4",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"
-	},
+		"drink_name": "ÖL_NMR4",
+		"img_link": "http://1pjlcu210mzdvv6zr350wqxp.wpengine.netdna-cdn.com/wp-content/uploads/2016/01/alcohol-beer.jpg"	},
 	{
-		"drink_name": "beer5",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
-},{
-		"drink_name": "beer5",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
-},{
-		"drink_name": "beer5",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
-},{
-		"drink_name": "beer5",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
-},{
-		"drink_name": "beer5",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
-},{
-		"drink_name": "beer5",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
-},{
-		"drink_name": "beer5",
-"img_link": "http://www.billboard.com/files/styles/article_main_image/public/media/21_Savage-vegas-press-2016-bb31-beat-billboard-1548.jpg"	
-},
+		"drink_name": "ÖL_NMR5",
+		"img_link": "http://1pjlcu210mzdvv6zr350wqxp.wpengine.netdna-cdn.com/wp-content/uploads/2016/01/alcohol-beer.jpg"},{
+		"drink_name": "ÖL_NMR6",
+		"img_link": "http://1pjlcu210mzdvv6zr350wqxp.wpengine.netdna-cdn.com/wp-content/uploads/2016/01/alcohol-beer.jpg"},{
+		"drink_name": "ÖL_NMR7",
+		"img_link": "http://1pjlcu210mzdvv6zr350wqxp.wpengine.netdna-cdn.com/wp-content/uploads/2016/01/alcohol-beer.jpg"},{
+		"drink_name": "ÖL_NMR8",
+		"img_link": "http://1pjlcu210mzdvv6zr350wqxp.wpengine.netdna-cdn.com/wp-content/uploads/2016/01/alcohol-beer.jpg"},{
+		"drink_name": "ÖL_NMR9",
+		"img_link": "http://1pjlcu210mzdvv6zr350wqxp.wpengine.netdna-cdn.com/wp-content/uploads/2016/01/alcohol-beer.jpg"},{
+		"drink_name": "VIN",
+		"img_link": "http://www.thefrenchcellar.sg/wp-content/uploads/2015/01/wine-temp.jpg"},{
+		"drink_name": "ÖVRIGT",
+		"img_link": "https://img.tesco.com/Groceries/pi/738/5010103916738/IDShot_540x540.jpg"},
 ];

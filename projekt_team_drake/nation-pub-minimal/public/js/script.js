@@ -19,7 +19,7 @@ var iindex=0;
 				 document.getElementById("myTH"+i).style.paddingRight="3em";
 			 }
 			/*image*/
-				img("myTH"+i,i,"food","5em","food");
+				img("myTH"+i,i,"food","7.5em","food");
 			/*lactose and gluten checkboxes*/
 				lactoseNgluten("myTH"+i,i);
 		 }
@@ -46,7 +46,7 @@ var iindex=0;
 		}
 
 		img.style.height = img_size;
-		img.style.width = "7em";
+		img.style.width = "8em";
 		img.style.border = "white Ridge";
 		img.style.borderRadius="1em";
 		document.getElementById(parent_id).appendChild(img);
@@ -168,7 +168,7 @@ var iindex=0;
 				 document.getElementById("mySauce"+i).style.paddingRight="30px";
 			 }
  			/*pictures */
-			img("mySauce"+i,i,"sauce","5em","sauce");
+			img("mySauce"+i,i,"sauce","7em","sauce");
 		}
   }
     /*method that displays drinks*/
@@ -181,7 +181,7 @@ var iindex=0;
 				 document.getElementById("myDrinks"+i).style.paddingRight="30px";
 			 }
  			/*pictures */
-			img("myDrinks"+i,i,"drinks","5em","drinks");
+			img("myDrinks"+i,i,"drinks","7em","drinks");
 		}
   }
 	/*notifies the user that the order has been sent*/

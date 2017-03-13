@@ -10,7 +10,7 @@
 		<!--script src="vue/vue.js"></script-->
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>majorkey</title>
+		<title>firstPage</title>
 	</head>
 	<!-- end of head -->
 
@@ -22,9 +22,9 @@
 	<!-- sidebar -->
 			<div id="left">
 				<nav>
-					<ul id="navBar">
-		  			<li><a href="kitchen">Köket</a></li> <!--Byt ut #kitchen mot länken till köket-->
-		  		</ul>
+					
+		  			<li id="navBar"><a href="kitchen">Köket</a></li> <!--Byt ut #kitchen mot länken till köket-->
+		  		
 	<!-- orders listed in side bar -->
 
 					<div id="order_listDiv">
@@ -43,7 +43,7 @@
 	<!-- food part of the right section -->
 				<div id="foodNdrink">
 					<h2> Välj burgare </h2>
-					<div id="Burg_div" class="scrollmenu"></div>
+					<div id="Burg_div" class="scrollmenu1"></div>
 				</div>
 	<!-- sauce part of the right section -->
 				<div id="sauce_div">
@@ -52,7 +52,7 @@
 				</div>
 	<!-- drink part of the right section -->
 				<div id="drink">
-					<h2> Välj läsk/kaffe/dryck </h2>
+					<h2> Välj Dryck </h2>
 					<div id ="dryck_div" class = "scrollmenu"></div>
 				</div>
 	<!-- extras part of the right section -->
@@ -73,9 +73,9 @@
 
 					<!--Send info button-->
 									<div id="sendB_div" class="extraD">
+										<h5>Skicka beställning</h5>
 										<button onclick="sendinfo_press()" id="send_button">
-										<img src="http://images.clipartbro.com/4/green-tick-4984.png" width="50" height="100%">
-										Send info
+										<img src="http://images.clipartbro.com/4/green-tick-4984.png" width="60px" height="60px">
 										</button>
 										<div id="warningsign"></div>
 									</div>

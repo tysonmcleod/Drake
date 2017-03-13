@@ -19,16 +19,16 @@
 		<div class="container">
 	<!-- top of page -->
 			<div id="top">
-				<div id="lefty"><li id="navBar"><a href="http://localhost:3000/">Food</a></li> </div>
-				<div id="orders">Orders </div>
-				<div id="done">Done </div>
+				<div id="lefty"><li id="navBar"><a href="http://localhost:3000/">MAT</a></li> </div>
+				<div id="orders"></div>
+				<div id="done"></div>
 			</div>
 	<!-- new orders -->
 		<div id="K_orders">
 			<div id="neworders">
 				<div id="newOrderBox">
 					    <h1>Väntande beställningar</h1>
-						<ol>
+						<ol id="test">
 						  <li v-for="(item, key) in orders" v-if="!item.done">
 							{{ key }} : {{ item.orderItems }}
 							<button v-on:click="markDone(key)">
