@@ -195,8 +195,7 @@ textarea{
 	margin-right: 1em;
 	margin-bottom: 0em;
 	margin-left: 1em;
-	background-color: white;
-}
+	background-image: url('http://images.clipartbro.com/4/green-tick-4984.png');
 #sendB_div{
 flex:1;
 order:3;
