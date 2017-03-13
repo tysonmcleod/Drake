@@ -208,5 +208,8 @@ button:hover{
 }
 
 #warningsign{
-	margin-top:0;
+	
+	flex:0.5;
+	order:4;
+	
 }

@@ -147,7 +147,7 @@ var iindex=0;
 	}
   /*Helps disp_warningmsg with the warnings*/
 	function warn_help(warn_msg,color){
-		var warn = document.createElement("H5");
+		var warn = document.createElement("H3");
 		warn.setAttribute("style","color:"+color);
 		warn.setAttribute("id","warn");
 		var msg = document.createTextNode(warn_msg);
